@@ -1,7 +1,9 @@
   body {
     margin: 0;
   }
-
+header{
+  position: relative;
+}
   .hero {
     position: relative;
     height: 420px;
@@ -28,35 +30,38 @@
     background: #fff;
     height: 300px;
   }
-  /* NAVBAR */
-.navbar {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 95%;
-  max-width: 1200px;
-  height: 60px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-
-  border-radius: 40px;
-
-  z-index: 3; /* MÁS ALTO que la imagen y waves */
-}
-
-/* ICONOS */
-.navbar i {
-  color: white;
-  font-size: 20px;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.7); /* clave para que se vean */
-  cursor: pointer;
+  nav svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: 0.3s;
+    color: rgba(255,255,255,0.9);
+     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+  }
+  nav a{
+    transition: 0.3s;
+  }
+  nav a:hover svg{
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  nav{
+    width: 90%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+   background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(2px); 
+    border-radius: 50px;
+    padding: 10px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  nav a.active svg {
+  color: #00d4ff;
 }
