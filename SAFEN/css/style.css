@@ -130,13 +130,25 @@ header{
   line-height: 1.6;
   font-size: 25px;
 }
+.bienvenida{
+  margin-top: -50px;
+}
 .info{
   background: #fff;
-  padding: 60px 40px;
-  margin-top: 5px;
-}
+  padding: 40px 40px;
+ }
 .line{
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.login{
+  margin-top: 17px;
+  text-align: center;
+  color: #333;
+}
+.login u{
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
 }
