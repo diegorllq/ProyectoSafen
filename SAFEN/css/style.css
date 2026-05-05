@@ -172,6 +172,8 @@ header{
   border-radius: 25px;
   position: relative;
   text-align: center;
+  height: 420px
+   
 }
 .card img {
   width: 120px;
@@ -189,4 +191,18 @@ header{
   justify-content: center;
   gap: 40px;
   margin-top: 60px;
+ 
+  
+  
+  align-items: flex-end; 
+  
+
+}
+.card h3{
+margin-top: 70px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
 }
