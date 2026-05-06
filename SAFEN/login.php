@@ -85,7 +85,7 @@ if (isset($_POST["registro"])) {
   }
 }
 
-<!--LOGIN-->
+
 if (isset($_POST["login"])) {
 
   $correo = $_POST["correo"];
