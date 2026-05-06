@@ -66,7 +66,7 @@
     <script src="/script.js"></script>
     <?php
 
-<!--REGISTRO-->
+
 if (isset($_POST["registro"])) {
 
   $nombre = $_POST["nombre"];
