@@ -172,7 +172,7 @@ header{
   border-radius: 25px;
   position: relative;
   text-align: center;
-  height: 420px
+  height: 300px;
    
 }
 .card img {
@@ -205,4 +205,5 @@ margin-top: 70px;
 .card p {
   font-size: 14px;
   line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
 }
