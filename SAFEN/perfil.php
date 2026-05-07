@@ -99,22 +99,6 @@ value="<?php echo $usuario["correo"]; ?>">
 name="telefono"
 value="<?php echo $usuario["telefono"]; ?>">
 
-<button type="button" id="btn-password" class="btn-guardar">
-    Cambiar contraseña
-</button>
-
-<div id="cambiar-pass" style="display:none;">
-
-    <label>Contraseña actual</label>
-    <input type="password" name="actual">
-
-    <label>Nueva contraseña</label>
-    <input type="password" name="nueva">
-
-    <label>Confirmar contraseña</label>
-    <input type="password" name="confirmar">
-
-</div>
 
 <label>Foto de perfil</label>
 <input type="file"
@@ -136,6 +120,6 @@ name="foto">
    
 
 </div>
-<script src="cotrasena.js"></script>
+
 </body>
 </html>
