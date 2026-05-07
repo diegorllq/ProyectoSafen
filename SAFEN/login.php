@@ -2,7 +2,7 @@
 include("conexion.php");
 session_start();
 
-// 🔐 REGISTRO
+
 if (isset($_POST["registro"])) {
 
   $nombre = $_POST["nombre"];
@@ -22,7 +22,7 @@ if (isset($_POST["registro"])) {
   }
 }
 
-// 🔐 LOGIN
+
 if (isset($_POST["login"])) {
 
   $correo = $_POST["correo"];
@@ -119,7 +119,7 @@ if (isset($_POST["login"])) {
 
 </div>
 
-<!-- 🔴 Mostrar error si existe -->
+
 <?php if (isset($error)) { ?>
   <script>alert("<?php echo $error; ?>");</script>
 <?php } ?>
