@@ -85,7 +85,7 @@ if (isset($_POST["guardar"])) {
     <label>Nombre</label>
 <input type="text"
 name="nombre"
-value="<?php echo $usuario["correo"]; ?>">
+value="<?php echo $usuario["nombre"]; ?>">
 
 <label>Email</label>
 
