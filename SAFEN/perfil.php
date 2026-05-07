@@ -115,13 +115,13 @@ if (isset($_POST["guardar"])) {
             <label>Teléfono</label>
             <input type="text" name="telefono" value="<?php echo $usuario["telefono"]; ?>">
 
-            <!-- BOTÓN CAMBIAR CONTRASEÑA -->
-            <button type="button" id="btn-password" class="btn-guardar">
-                Cambiar contraseña
-            </button>
+            
+            
 
-            <!-- CAMPOS OCULTOS -->
-            <div id="cambiar-pass" style="display:none;">
+            <label>Foto de perfil</label>
+            <input type="file" name="foto">
+
+            div id="cambiar-pass" style="display:none;">
 
                 <label>Contraseña actual</label>
                 <input type="password" name="actual">
@@ -133,11 +133,12 @@ if (isset($_POST["guardar"])) {
                 <input type="password" name="confirmar">
 
             </div>
-
-            <label>Foto de perfil</label>
-            <input type="file" name="foto">
-
             <div class="btns">
+                <button type="button" id="btn-password" class="btn-guardar">
+                Cambiar contraseña
+            </button>
+
+            
                 <button type="submit" name="guardar" class="btn-guardar">
                     Guardar cambios
                 </button>
