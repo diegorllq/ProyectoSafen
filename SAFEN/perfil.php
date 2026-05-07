@@ -55,17 +55,17 @@ value="<?php echo $usuario["correo"]; ?>">
 name="telefono"
 value="<?php echo $usuario["telefono"]; ?>">
 
-<button type="submit" name="guardar"> 
-    Guardar cambios
-</button>
-</form>
+<div class="btns">
+    <button type="submit" name="guardar" class="btn-guardar">
+        Guardar cambios
+    </button>
 
-<a href="logout.php">
-            <button class="logout">
-                Cerrar sesión
-            </button>
-        </a>
-
+    <a href="logout.php">
+        <button type="button" class="btn-logout">
+            Cerrar sesión
+        </button>
+    </a>
+</div>
 
    </div>
    
