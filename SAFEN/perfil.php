@@ -63,7 +63,11 @@ if (isset($_POST["guardar"])) {
     <link rel="stylesheet" href="css/perfil.css">
 </head>
 <body>
-    <div class="perfil-container">
+   
+<button id="btn-volver" class="btn-back">
+    &#8592;
+</button>
+<div class="perfil-container">
      <div class="left">
         <?php if ($usuario["foto"]) { ?>
     <img src="img/<?php echo $usuario["foto"]; ?>" class="foto">

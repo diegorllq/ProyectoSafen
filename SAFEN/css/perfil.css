@@ -93,3 +93,20 @@ body{
     border-radius:30px;
     cursor:pointer;
 }
+.bt-back{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+     background: #15173d;
+     color: white;
+     border: none;
+     font-size: 22px;
+     padding: 10px 15px;
+     border-radius: 50%;
+     cursor: pointer;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+     transition: 0.3s;
+}
+.btn-back:hover{
+    background: #ff2e63;
+}
