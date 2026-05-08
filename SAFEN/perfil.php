@@ -11,35 +11,54 @@ $nombre = $_SESSION["usuario"];
 
 $sql = "SELECT * FROM usuarios WHERE nombre='$nombre'";
 $resultado = mysqli_query($conn, $sql);
-
 $usuario = mysqli_fetch_assoc($resultado);
 
+
+// GUARDAR CAMBIOS
 if (isset($_POST["guardar"])) {
 
     $nuevoNombre = $_POST["nombre"];
     $nuevoCorreo = $_POST["correo"];
     $telefono = $_POST["telefono"];
 
+    $actual = $_POST["actual"] ?? "";
+    $nueva = $_POST["nueva"] ?? "";
+    $confirmar = $_POST["confirmar"] ?? "";
+
     $fotoNombre = $_FILES["foto"]["name"];
     $rutaTemporal = $_FILES["foto"]["tmp_name"];
 
-    // Si subió imagen
+    $updatePassword = "";
+
+    //  CAMBIO DE CONTRASEÑA
+    if (!empty($actual) || !empty($nueva) || !empty($confirmar)) {
+
+        if (!password_verify($actual, $usuario["password"])) {
+            echo "<script>alert('Contraseña actual incorrecta');</script>";
+        } else if ($nueva !== $confirmar) {
+            echo "<script>alert('Las contraseñas no coinciden');</script>";
+        } else {
+            $passwordHash = password_hash($nueva, PASSWORD_DEFAULT);
+            $updatePassword = ", password='$passwordHash'";
+        }
+    }
+
+    //  QUERY BASE
+    $sql = "UPDATE usuarios 
+            SET nombre='$nuevoNombre',
+                correo='$nuevoCorreo',
+                telefono='$telefono'
+                $updatePassword";
+
+    //  FOTO
     if (!empty($fotoNombre)) {
-
-        // nombre único
         $fotoFinal = time() . "_" . $fotoNombre;
-
         move_uploaded_file($rutaTemporal, "img/" . $fotoFinal);
 
-        $sql = "UPDATE usuarios 
-                SET nombre='$nuevoNombre', correo='$nuevoCorreo', telefono='$telefono', foto='$fotoFinal'
-                WHERE nombre='$nombre'";
-    } else {
-
-        $sql = "UPDATE usuarios 
-                SET nombre='$nuevoNombre', correo='$nuevoCorreo', telefono='$telefono'
-                WHERE nombre='$nombre'";
+        $sql .= ", foto='$fotoFinal'";
     }
+
+    $sql .= " WHERE nombre='$nombre'";
 
     if (mysqli_query($conn, $sql)) {
 
@@ -107,6 +126,24 @@ value="<?php echo $usuario["telefono"]; ?>">
 <label>Foto de perfil</label>
 <input type="file"
 name="foto">
+<!-- CAMBIAR CONTRA -->
+<button type="button" id="btn-password" class="btn-guardar">
+    Cambiar contraseña
+</button>
+
+<!-- CAMPOS OCULTOS -->
+<div id="cambiar-pass" style="display:none;">
+
+    <label>Contraseña actual</label>
+    <input type="password" name="actual">
+
+    <label>Nueva contraseña</label>
+    <input type="password" name="nueva">
+
+    <label>Confirmar contraseña</label>
+    <input type="password" name="confirmar">
+
+</div>
 
 <div class="btns">
     <button type="submit" name="guardar" class="btn-guardar">
