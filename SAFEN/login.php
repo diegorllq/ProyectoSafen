@@ -3,41 +3,63 @@ include("conexion.php");
 session_start();
 
 
+//   REGISTRO
+
 if (isset($_POST["registro"])) {
 
   $nombre = $_POST["nombre"];
   $correo = $_POST["correo_reg"];
   $password = $_POST["password_reg"];
 
-  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+  // Verificar si el correo ya existe
+  $stmt = $conn->prepare("SELECT id FROM usuarios WHERE correo=?");
+  $stmt->bind_param("s", $correo);
+  $stmt->execute();
+  $resultado = $stmt->get_result();
 
-  $sql = "INSERT INTO usuarios (nombre, correo, password)
-          VALUES ('$nombre', '$correo', '$passwordHash')";
+  if ($resultado->num_rows > 0) {
 
-  if (mysqli_query($conn, $sql)) {
-    header("Location: login.php"); // recarga limpia
-    exit();
+    $error = "Este correo ya está registrado";
+
   } else {
-    $error = "Error al registrar";
+
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+    $stmt = $conn->prepare("INSERT INTO usuarios (nombre, correo, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $nombre, $correo, $passwordHash);
+
+    if ($stmt->execute()) {
+      header("Location: login.php");
+      exit();
+    } else {
+      $error = "Error al registrar";
+    }
   }
 }
 
 
+//  LOGIN (CORREGIDO)
 if (isset($_POST["login"])) {
 
   $correo = $_POST["correo"];
   $password = $_POST["password"];
 
-  $sql = "SELECT * FROM usuarios WHERE correo='$correo'";
-  $resultado = mysqli_query($conn, $sql);
+  //  LOGIN 
+  $stmt = $conn->prepare("SELECT * FROM usuarios WHERE correo=?");
+  $stmt->bind_param("s", $correo);
+  $stmt->execute();
+  $resultado = $stmt->get_result();
 
-  if (mysqli_num_rows($resultado) == 1) {
+  if ($resultado->num_rows == 1) {
 
-    $usuario = mysqli_fetch_assoc($resultado);
+    $usuario = $resultado->fetch_assoc();
 
     if (password_verify($password, $usuario["password"])) {
 
+      //  USO DE ID
       $_SESSION["usuario"] = $usuario["nombre"];
+      $_SESSION["id"] = $usuario["id"];
+
       header("Location: index.php");
       exit();
 
