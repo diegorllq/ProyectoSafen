@@ -7,6 +7,9 @@
     <title>registro</title>
 </head>
 <body>
+
+<div id="alerta" class="alerta"></div>
+
     <form method="POST">
   <input type="text" name="nombre" placeholder="Nombre" required>
   <input type="email" name="correo" placeholder="Correo" required>
@@ -33,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
-
+<script src="alertas.js"></script>
 </body>
 </html>
 </body>

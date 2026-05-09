@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
 
-// VALIDAR TOKEN SEGURIDAD
+// VALIDAR TOKEN
 if (!isset($_GET["token"])) {
   die("Token inválido");
 }
@@ -19,15 +19,18 @@ if ($resultado->num_rows == 0) {
 
 $usuario = $resultado->fetch_assoc();
 
+$mensaje = "";
+$tipo = "";
 
-// CAMBIAR CONTRA
+// CAMBIAR CONTRASEÑA
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $nueva = $_POST["nueva"];
   $confirmar = $_POST["confirmar"];
 
   if ($nueva !== $confirmar) {
-    echo "Las contraseñas no coinciden";
+    $mensaje = "Las contraseñas no coinciden";
+    $tipo = "error";
   } else {
 
     $hash = password_hash($nueva, PASSWORD_DEFAULT);
@@ -36,10 +39,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("si", $hash, $usuario["id"]);
     $stmt->execute();
 
-    echo "Contraseña actualizada correctamente";
+    $mensaje = "Contraseña actualizada correctamente";
+    $tipo = "success";
   }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reset</title>
+
+<!--  FALTABA ESTO -->
+<link rel="stylesheet" href="alertas.css">
+
+</head>
+<body>
+
+<div id="alerta" class="alerta"></div>
 
 <form method="POST">
   <h2>Nueva contraseña</h2>
@@ -47,3 +66,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
   <button type="submit">Cambiar contraseña</button>
 </form>
+
+<script src="alertas.js"></script>
+
+<!--MOSTRAR ALERTA -->
+<?php if ($mensaje != "") { ?>
+<script>
+mostrarAlerta("<?php echo $mensaje; ?>", "<?php echo $tipo; ?>");
+
+<?php if ($tipo == "success") { ?>
+setTimeout(() => {
+    window.location.href = "login.php";
+}, 2000);
+<?php } ?>
+</script>
+<?php } ?>
+
+</body>
+</html>

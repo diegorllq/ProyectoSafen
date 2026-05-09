@@ -2,9 +2,10 @@
 include("conexion.php");
 session_start();
 
+$mensaje = "";
+$tipo = "";
 
-//   REGISTRO
-
+// REGISTRO
 if (isset($_POST["registro"])) {
 
   $nombre = $_POST["nombre"];
@@ -19,7 +20,8 @@ if (isset($_POST["registro"])) {
 
   if ($resultado->num_rows > 0) {
 
-    $error = "Este correo ya está registrado";
+    $mensaje = "Este correo ya está registrado";
+    $tipo = "error";
 
   } else {
 
@@ -29,22 +31,24 @@ if (isset($_POST["registro"])) {
     $stmt->bind_param("sss", $nombre, $correo, $passwordHash);
 
     if ($stmt->execute()) {
-      header("Location: login.php");
-      exit();
+
+      $mensaje = "Cuenta creada correctamente";
+      $tipo = "success";
+
     } else {
-      $error = "Error al registrar";
+      $mensaje = "Error al registrar";
+      $tipo = "error";
     }
   }
 }
 
 
-//  LOGIN (CORREGIDO)
+// LOGIN
 if (isset($_POST["login"])) {
 
   $correo = $_POST["correo"];
   $password = $_POST["password"];
 
-  //  LOGIN 
   $stmt = $conn->prepare("SELECT * FROM usuarios WHERE correo=?");
   $stmt->bind_param("s", $correo);
   $stmt->execute();
@@ -56,7 +60,6 @@ if (isset($_POST["login"])) {
 
     if (password_verify($password, $usuario["password"])) {
 
-      //  USO DE ID
       $_SESSION["usuario"] = $usuario["nombre"];
       $_SESSION["id"] = $usuario["id"];
 
@@ -64,11 +67,13 @@ if (isset($_POST["login"])) {
       exit();
 
     } else {
-      $error = "Contraseña incorrecta";
+      $mensaje = "Contraseña incorrecta";
+      $tipo = "error";
     }
 
   } else {
-    $error = "Usuario no encontrado";
+    $mensaje = "Usuario no encontrado";
+    $tipo = "error";
   }
 }
 ?>
@@ -76,15 +81,21 @@ if (isset($_POST["login"])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/stylelog.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link rel="stylesheet" href="css/stylelog.css">
+<link rel="stylesheet" href="alertas.css">
+
 </head>
 <body>
 
+<div id="alerta" class="alerta"></div>
+
 <div class="container">
 
+  <!-- LOGIN -->
   <div class="container-form">
     <form class="sign-in" method="POST">
       <h2>Iniciar sesión</h2>
@@ -99,11 +110,12 @@ if (isset($_POST["login"])) {
         <input type="password" name="password" required> 
       </div>
 
-      <a href="forgot.php">Forgot password</a>
+      <a href="forgot.php">¿Olvidaste tu contraseña?</a>
       <button class="buttom" name="login">Iniciar sesión</button>
     </form>
   </div>
 
+  <!-- REGISTRO -->
   <div class="container-form">
     <form class="sign-up" method="POST">
       <h2>Crear cuenta</h2>
@@ -127,6 +139,7 @@ if (isset($_POST["login"])) {
     </form>
   </div>
 
+  <!-- PANEL -->
   <div class="container-welcome">
     <div class="welcome-sign-up welcome">
       <h3>Bienvenido</h3>
@@ -141,12 +154,22 @@ if (isset($_POST["login"])) {
 
 </div>
 
+<script src="script.js"></script>
+<script src="alertas.js"></script>
 
-<?php if (isset($error)) { ?>
-  <script>alert("<?php echo $error; ?>");</script>
+<!-- ALERTAS -->
+<?php if ($mensaje != "") { ?>
+<script>
+mostrarAlerta(<?php echo json_encode($mensaje); ?>, "<?php echo $tipo; ?>");
+
+<?php if ($tipo == "success") { ?>
+setTimeout(() => {
+  window.location.href = "login.php";
+}, 2000);
 <?php } ?>
 
-<script src="script.js"></script>
+</script>
+<?php } ?>
 
 </body>
 </html>

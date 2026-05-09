@@ -24,8 +24,21 @@ if (isset($_POST["enviar"])) {
 }
 ?>
 
-<form method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alertas.css">
+</head>
+<body>
+ <div id="alerta" class="alerta"></div>
+    <form method="POST">
   <h2>Recuperar contraseña</h2>
   <input type="email" name="correo" placeholder="Tu correo" required>
   <button type="submit" name="enviar">Enviar enlace</button>
 </form>
+<script src="alertas.js"></script>
+</body>
+</html>
