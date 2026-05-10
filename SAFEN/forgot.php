@@ -30,15 +30,33 @@ if (isset($_POST["enviar"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="alertas.css">
+    <link rel="stylesheet" href="/SAFEN/css/alertas.css">
+   <link rel="stylesheet" href="/SAFEN/css/forgot.css">
 </head>
 <body>
  <div id="alerta" class="alerta"></div>
-    <form method="POST">
-  <h2>Recuperar contraseña</h2>
+    <main class="forgot-container">
+<h2>Recuperar contraseña</h2>
+<p>Para recuperar tu contraseña, ingresa tu correo electrónico para enviarte un enlace de recuperación</p>
+
+ <form method="POST">
+  
+  
   <input type="email" name="correo" placeholder="Tu correo" required>
+
   <button type="submit" name="enviar">Enviar enlace</button>
 </form>
-<script src="alertas.js"></script>
+<?php if (isset($link)) { ?>
+    <div class="link-box">
+      <span>Link de recuperación</span>
+      <div class="link">
+        <?php echo $link; ?>
+      </div>
+    </div>
+  <?php } ?>
+
+</main>
+
+<script src="alert.js"></script>
 </body>
 </html>

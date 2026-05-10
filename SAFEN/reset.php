@@ -51,26 +51,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reset</title>
-<link rel="stylesheet" href="alertas.css">
+
+<link rel="stylesheet" href="css/alertas.css">
+<link rel="stylesheet" href="css/reset.css">
 
 </head>
 <body>
 
 <div id="alerta" class="alerta"></div>
 
-<form method="POST">
-  <h2>Nueva contraseña</h2>
-  <input type="password" name="nueva" placeholder="Nueva contraseña" required>
-  <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
-  <button type="submit">Cambiar contraseña</button>
-</form>
+<main class="reset-container">
+
+  <div class="reset-header">
+    <h2>Cambiar contraseña</h2>
+    <span class="close" onclick="window.location.href='login.php'">✖</span>
+  </div>
+
+  <p>
+    Tu contraseña debe tener al menos 6 caracteres e incluir una combinación
+    de números, letras y caracteres especiales.
+  </p>
+
+  <form method="POST">
+    <input type="password" name="nueva" placeholder="Nueva contraseña" required>
+    <input type="password" name="confirmar" placeholder="Vuelve a escribir la nueva contraseña" required>
+    <button type="submit">Cambiar contraseña</button>
+  </form>
+
+</main>
 
 <script src="alert.js"></script>
 
-<!--MOSTRAR ALERTA -->
-<?php if ($mensaje != "") { ?>
+<!-- MOSTRAR ALERTA -->
+<?php if (isset($mensaje) && $mensaje != "") { ?>
 <script>
-mostrarAlerta("<?php echo $mensaje; ?>", "<?php echo $tipo; ?>");
+mostrarAlerta(<?php echo json_encode($mensaje); ?>, "<?php echo $tipo; ?>");
 
 <?php if ($tipo == "success") { ?>
 setTimeout(() => {
@@ -79,6 +94,3 @@ setTimeout(() => {
 <?php } ?>
 </script>
 <?php } ?>
-
-</body>
-</html>
