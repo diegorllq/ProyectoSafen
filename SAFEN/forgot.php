@@ -1,6 +1,8 @@
 <?php
 include("conexion.php");
 
+$link = null; // importante
+
 if (isset($_POST["enviar"])) {
 
   $correo = $_POST["correo"];
@@ -13,13 +15,9 @@ if (isset($_POST["enviar"])) {
 
   if ($stmt->execute()) {
 
+    //  link guardado
     $link = "http://localhost/SAFEN/reset.php?token=" . $token;
 
-    echo "<p>Link de recuperación:</p>";
-    echo "<a href='$link'>$link</a>";
-
-  } else {
-    echo "Error";
   }
 }
 ?>
@@ -55,17 +53,19 @@ if (isset($_POST["enviar"])) {
   <button type="submit" name="enviar">Enviar enlace</button>
 </form>
 
-<?php if (isset($link) && $link != "") { ?>
-  <div class="link-box">
-    <p>Tu enlace de recuperación está listo:</p>
+<!-- aqui se muestra, solo el boton -->
+  <?php if ($link) { ?>
+    <div class="link-box">
+      <p>Tu enlace de recuperación está listo:</p>
 
-    <div class="link">
-      <a href="<?php echo $link; ?>" target="_blank">
-        Ir a cambiar contraseña
-      </a>
+      <div class="link">
+        <a href="<?php echo $link; ?>" target="_blank">
+          Ir a cambiar contraseña
+        </a>
+      </div>
     </div>
-  </div>
-<?php } ?>
+  <?php } ?>
+
 
 </main>
 
