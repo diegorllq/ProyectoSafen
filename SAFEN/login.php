@@ -86,7 +86,7 @@ if (isset($_POST["login"])) {
 <title>Login</title>
 
 <link rel="stylesheet" href="css/stylelog.css">
-<link rel="stylesheet" href="alertas.css">
+<link rel="stylesheet" href="css/alertas.css">
 
 </head>
 <body>
