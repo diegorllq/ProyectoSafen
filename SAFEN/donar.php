@@ -64,42 +64,38 @@ if (isset($_POST["donar"])) {
  
 
  <main class="donar-container">
+    <!-- izquierda -->
+     <section class="donar-left">
 
-  <!-- izquierda -->
-  <section class="donar-left">
-
-    <h1>¡Haz tu donación!</h1>
-
+        <h1>¡Haz tu donación!</h1>
     <form method="POST">
 
-      <label>Monto a donar</label>
-      <input type="number" name="monto" min="1" step="0.01"
-      placeholder="Ingrese un monto mayor o igual a $1.00" required>
+    <label>Monto a donar</label>
+<input type="number" name="monto" min="1" step="0.01"
+placeholder="Ingrese un monto mayor o igual a $1.00" required>
+<label>Método de pago</label>
+<select name="metodo" required>
+    <option value="">Seleccionar</option>
+     <option value="tarjeta">Tarjeta</option>
+      <option value="paypal">Paypal</option>
+       <option value="efectivo">Efectivo</option>
+</select>
 
-      <label>Método de pago</label>
-      <select name="metodo" required>
-        <option value="">Seleccionar</option>
-        <option value="tarjeta">Tarjeta</option>
-        <option value="paypal">Paypal</option>
-        <option value="efectivo">Efectivo</option>
-      </select>
-
-      <button type="submit" name="donar">DONAR</button>
+<button type="submit" name="donar">DONAR</button>
 
     </form>
 
-  </section>
+     </section>
 
-  <!-- derecha -->
-  <section class="donar-right">
-    <h2>
+     <section  class="donar-right">
+<h2>
       Lo que para ti puede ser poco,<br>
       para alguien más puede significar<br>
       <span>volver a empezar</span>
     </h2>
-  </section>
+     </section>
 
-</main>
+ </main>
 
  <script src="/SAFEN/alert.js"></script>
 
