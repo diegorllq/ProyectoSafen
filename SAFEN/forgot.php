@@ -36,13 +36,14 @@ if (isset($_POST["enviar"])) {
 <body>
  <div id="alerta" class="alerta"></div>
 
-  <a href="login.php" class="back-btn">
-
+  <a href="login.php"  class="back-btn">
+    ←
+</a>
     <main class="forgot-container">
 
       
-  ←
-</a>
+  
+
 <h2>Recuperar contraseña</h2>
 <p>Para recuperar tu contraseña, ingresa tu correo electrónico para enviarte un enlace de recuperación</p>
 
