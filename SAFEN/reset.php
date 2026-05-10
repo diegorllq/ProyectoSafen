@@ -51,8 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reset</title>
-
-<!--  FALTABA ESTO -->
 <link rel="stylesheet" href="alertas.css">
 
 </head>
@@ -67,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <button type="submit">Cambiar contraseña</button>
 </form>
 
-<script src="alertas.js"></script>
+<script src="alert.js"></script>
 
 <!--MOSTRAR ALERTA -->
 <?php if ($mensaje != "") { ?>

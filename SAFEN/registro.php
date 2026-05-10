@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
-<script src="alertas.js"></script>
+<script src="alert.js"></script>
 </body>
 </html>
 </body>

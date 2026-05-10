@@ -155,7 +155,7 @@ if (isset($_POST["login"])) {
 </div>
 
 <script src="script.js"></script>
-<script src="alertas.js"></script>
+<script src="alert.js"></script>
 
 <!-- ALERTAS -->
 <?php if ($mensaje != "") { ?>
