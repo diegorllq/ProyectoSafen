@@ -76,24 +76,32 @@
 </section>
 
 <div class="cards">
-  <div class="card">
- <img src="img/img-mision.jpg" alt="">
-  <h3>Misión</h3>
-  <p>Conectar a las personas afectadas por desastres naturales en El Salvador con profesionales y voluntarios comprometidos con ayudar, activando una respuesta ágil, organizada y efectiva que genere un impacto real en momentos de emergencia</p>
-</div>
-<div class="card">
-  <img src="img/img-vision.png" alt="">
-  <h3>Visión</h3>
-  <p>Ser la plataforma lider en gestión de emergencias en El Salvador, construyedo un país  más preparado,seguro y unido, donde omunidades e instituciones tengan aceeso a soluciones tecnológicas, innovadoras, accesibles y confiables que permitan actuar con rapidez y proteger vidas en los momentos más críticos</p>
-</div>
-<div class="cards">
-  <div class="card">
-  <img src="img/image-propo.png" alt="">
-  <h3>Propósito</h3>
-  <p>Mejorar la respuesta ante desastres naturales en  El Salvador, conectando a las personas afectadas con quienes pueden ayudarlos, en el momento en que más lo necesitan. SAFEN nace para proteger vidas, reducir la incertidumbre, y acompañar a las comunidades en situaciones críticas</p>
-  
-</div>
 
+  <div class="card">
+    <img src="/SAFEN/img/img-mision.jpg" alt="Misión">
+    <h3>Misión</h3>
+    <p>
+      Conectar a las personas afectadas por desastres naturales en El Salvador con profesionales y voluntarios comprometidos con ayudar, activando una respuesta ágil, organizada y efectiva que genere un impacto real en momentos de emergencia.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="/SAFEN/img/img-vision.png" alt="Visión">
+    <h3>Visión</h3>
+    <p>
+      Ser la plataforma líder en gestión de emergencias en El Salvador, construyendo un país más preparado, seguro y unido, donde comunidades e instituciones tengan acceso a soluciones tecnológicas, innovadoras, accesibles y confiables que permitan actuar con rapidez y proteger vidas en los momentos más críticos.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="/SAFEN/img/image-propo.png" alt="Propósito">
+    <h3>Propósito</h3>
+    <p>
+      Mejorar la respuesta ante desastres naturales en El Salvador, conectando a las personas afectadas con quienes pueden ayudarlas en el momento en que más lo necesitan. SAFEN nace para proteger vidas, reducir la incertidumbre y acompañar a las comunidades en situaciones críticas.
+    </p>
+  </div>
+
+</div>
 </body>
 
 </html>
