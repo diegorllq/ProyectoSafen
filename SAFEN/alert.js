@@ -6,9 +6,14 @@ function mostrarAlerta(mensaje, tipo = "info") {
 
     alerta.textContent = mensaje;
     alerta.className = "alerta " + tipo;
-    alerta.style.display = "block";
 
+    // mostrar con animación
     setTimeout(() => {
-        alerta.style.display = "none";
+        alerta.classList.add("show");
+    }, 50);
+
+    // ocultar
+    setTimeout(() => {
+        alerta.classList.remove("show");
     }, 3000);
 }
