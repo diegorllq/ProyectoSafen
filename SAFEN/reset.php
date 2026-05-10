@@ -59,12 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 <div id="alerta" class="alerta"></div>
-
-<main class="reset-container">
-
 <a href="forgot.php" class="back-btn">
   ←
 </a>
+<main class="reset-container">
+
+
 
   <div class="reset-header">
     <h2>Cambiar contraseña</h2>

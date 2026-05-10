@@ -35,8 +35,12 @@ if (isset($_POST["enviar"])) {
 </head>
 <body>
  <div id="alerta" class="alerta"></div>
+
+  <a href="login.php" class="back-btn">
+
     <main class="forgot-container">
-      <a href="login.php" class="back-btn">
+
+      
   ←
 </a>
 <h2>Recuperar contraseña</h2>
@@ -50,7 +54,7 @@ if (isset($_POST["enviar"])) {
   <button type="submit" name="enviar">Enviar enlace</button>
 </form>
 
-<?php if (isset($link)) { ?>
+<?php if (isset($link) && $link != "") { ?>
   <div class="link-box">
     <p>Tu enlace de recuperación está listo:</p>
 
