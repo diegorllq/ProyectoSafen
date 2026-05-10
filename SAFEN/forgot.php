@@ -29,13 +29,16 @@ if (isset($_POST["enviar"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recuperar contraseña</title>
     <link rel="stylesheet" href="/SAFEN/css/alertas.css">
    <link rel="stylesheet" href="/SAFEN/css/forgot.css">
 </head>
 <body>
  <div id="alerta" class="alerta"></div>
     <main class="forgot-container">
+      <a href="login.php" class="back-btn">
+  ←
+</a>
 <h2>Recuperar contraseña</h2>
 <p>Para recuperar tu contraseña, ingresa tu correo electrónico para enviarte un enlace de recuperación</p>
 
@@ -46,14 +49,18 @@ if (isset($_POST["enviar"])) {
 
   <button type="submit" name="enviar">Enviar enlace</button>
 </form>
+
 <?php if (isset($link)) { ?>
-    <div class="link-box">
-      <span>Link de recuperación</span>
-      <div class="link">
-        <?php echo $link; ?>
-      </div>
+  <div class="link-box">
+    <p>Tu enlace de recuperación está listo:</p>
+
+    <div class="link">
+      <a href="<?php echo $link; ?>" target="_blank">
+        Ir a cambiar contraseña
+      </a>
     </div>
-  <?php } ?>
+  </div>
+<?php } ?>
 
 </main>
 
