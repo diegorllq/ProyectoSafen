@@ -69,6 +69,6 @@ if (isset($_POST["enviar"])) {
 
 </main>
 
-<script src="alert.js"></script>
+<script src="/SAFEN/alert.js"></script>
 </body>
 </html>

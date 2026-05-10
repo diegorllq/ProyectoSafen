@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.donar-container{
+    display: flex;
+    height: 100vh;
+}
+.donar-left{
+    width: 50%;
+    background:#f5f5f5;
+    padding: 60px;
+}
+.donar-left h1{
+    color:#e91e63;
+    font-size: 40px;
+}
+.donar-left label{
+    display: block;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.donar-left input, 
+.donar-left select{
+    width:100%;
+  padding:10px;
+  margin-top:10px;
+  border:none;
+  border-bottom:2px solid #333;
+  background:transparent;
+}
+.donar-left button{
+  margin-top:30px;
+  padding:15px;
+  width:200px;
+  border:none;
+  border-radius:10px;
+  background:#6c8fa3;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+
+.donar-right{
+  width:50%;
+  background:#0d0f2b;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+}
+
+.donar-right h2{
+  font-size:32px;
+  line-height:1.4;
+}
+
+.donar-right span{
+  font-family: 'Satisfy', cursive;
+  font-size:36px;
+}

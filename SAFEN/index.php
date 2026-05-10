@@ -65,8 +65,8 @@
         con profesionales especializados para agilizar la respuesta.
       </p>
    <p class="login">
-    <u>Crea una cuenta o inicia sesión</u>
-   </p>
+  <a href="login.php">Crea una cuenta o inicia sesión</a>
+</p>
     </div>
 
   </div>
@@ -102,6 +102,7 @@
   </div>
 
 </div>
+
 </body>
 
 </html>
