@@ -21,7 +21,7 @@
 <body>
    <header class="header">
    
-<?php include("components/navbar.php"); ?>
+<?php include("navbar.php"); ?>
 <div class="hero">
   <img src="/SAFEN/img/image (1).png" alt="imagen">
 
