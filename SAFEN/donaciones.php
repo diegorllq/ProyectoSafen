@@ -30,6 +30,26 @@
 
 </header>
 
-    </header>
+    <section class="donacion-info">
+
+<div class="donacion-left">
+<h2>¡TÚ DONACIÓN NOS AYUDA A SEGUIR!</h2>
+<a href="donar.php" class="btn-donar">
+ ¡DONA AHORA!
+</a>
+</div>
+
+<div class="donacion-right">
+
+<div class="imagenes">
+  <img src="/SAFEN/img/image1.png" alt="">
+  <img src="/SAFEN/img/image2.png" alt="">
+  <img src="/SAFEN/img/image3.png" alt="">
+</div>
+
+<p>Tu ayuda puede devolver esperanza a quienes lo perdieron todo.</p>
+</div>
+
+    </section>
 </body>
 </html>

@@ -41,3 +41,58 @@ header{
   background: rgba(0, 0, 0, 0.35); /* controla la oscuridad */
   z-index: 1;
 }
+
+.donacion-info{
+  display:flex;
+  padding:60px;
+  background:#f5f5f5;
+  align-items:center;
+  justify-content:space-between;
+}
+.donacion-left{
+  width:40%;
+}
+
+.donacion-left h2{
+  color:#2d4a2d;
+  font-size:22px;
+  margin-bottom:20px;
+}
+.btn-donar{
+  display:inline-block;
+  padding:15px 30px;
+  background:#6c8fa3;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn-donar:hover{
+  background:#557c91;
+  transform:scale(1.05);
+}
+.donacion-right{
+  width:55%;
+  text-align:center;
+}
+.imagenes{
+  display:flex;
+  gap:15px;
+  background:#1c2147;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.imagenes img{
+  width:33%;
+  border-radius:5px;
+}
+
+
+.donacion-right p{
+  margin-top:15px;
+  font-style:italic;
+}
