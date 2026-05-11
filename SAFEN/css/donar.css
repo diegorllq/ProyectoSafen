@@ -48,13 +48,15 @@ body{
 
 .donar-left form{
   width:320px;
+   display:flex;
+  flex-direction:column;
 }
 
 .donar-left h1{
   color:#e91e63;
   font-size:35px;
   margin-bottom:20px;
-  text-align:left;
+  text-align:center;
 }
 
 .donar-left label{
@@ -122,5 +124,63 @@ body{
 .donar-right span{
   font-family: 'Satisfy', cursive;
   font-size:34px;
-  color:#ffb3c1; /* detalle rosado como la imagen */
+  color:#ffb3c1; 
+}
+
+.metodos{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+
+.metodo{
+  flex:1;
+  border:2px solid #ddd;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+  background:white;
+}
+
+
+.metodo input{
+  display:none;
+}
+
+.metodo img{
+  width:50px;
+  margin-bottom:10px;
+}
+
+
+.metodo span{
+  display:block;
+  font-size:14px;
+}
+
+
+.metodo:hover{
+  border-color:#e91e63;
+  transform:scale(1.05);
+}
+
+
+.metodo input:checked + img,
+.metodo input:checked + img + span{
+  filter:brightness(1.1);
+}
+
+
+
+
+.metodo input:checked ~ span{
+  color:#e91e63;
+}
+
+.metodo:has(input:checked){
+  border-color:#e91e63;
+  background:#fff0f5;
 }

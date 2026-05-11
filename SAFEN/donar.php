@@ -76,13 +76,31 @@ if (isset($_POST["donar"])) {
     <label>Monto a donar</label>
 <input type="number" name="monto" min="1" step="0.01"
 placeholder="Ingrese un monto mayor o igual a $1.00" required>
+
 <label>Método de pago</label>
-<select name="metodo" required>
-    <option value="">Seleccionar</option>
-     <option value="tarjeta">Tarjeta</option>
-      <option value="paypal">Paypal</option>
-       <option value="efectivo">Efectivo</option>
-</select>
+<div class="metodos">
+
+   <label class="metodo">
+    <input type="radio" name="metodo" value="tarjeta" required>
+    <img src="/SAFEN/img/tarjeta-credito.jpg" alt="Tarjeta">
+    <span>Tarjeta</span>
+  </label>
+
+  <label class="metodo">
+    <input type="radio" name="metodo" value="paypal">
+    <img src="/SAFEN/img/paypal.jpg" alt="Paypal">
+    <span>PayPal</span>
+  </label>
+
+  <label class="metodo">
+    <input type="radio" name="metodo" value="efectivo">
+    <img src="/SAFEN/img/efectivo.jpg" alt="Efectivo">
+    <span>Efectivo</span>
+  </label>
+
+</div>
+
+
 
 <button type="submit" name="donar">DONAR</button>
 

@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <a href="forgot.php" class="back-btn">
   ←
 </a>
+
 <main class="reset-container">
 
 
