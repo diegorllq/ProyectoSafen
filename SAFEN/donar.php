@@ -65,8 +65,9 @@ if (isset($_POST["donar"])) {
 
  <main class="donar-container">
     <!-- izquierda -->
+    
      <section class="donar-left">
-
+<section class="form-box">
         <h1>¡Haz tu donación!</h1>
     <form method="POST">
 
@@ -84,7 +85,7 @@ placeholder="Ingrese un monto mayor o igual a $1.00" required>
 <button type="submit" name="donar">DONAR</button>
 
     </form>
-
+</section>
      </section>
 
      <section  class="donar-right">
