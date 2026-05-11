@@ -13,6 +13,7 @@
 <div class="hero">
   <img src="/SAFEN/img/img-donaciones.png" alt="imagen">
 
+
   <!-- Curvas más altas pero rectas -->
   <svg class="waves" viewBox="0 0 1440 180" preserveAspectRatio="none">
     <path fill="#ffffff" d="
