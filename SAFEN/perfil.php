@@ -53,7 +53,7 @@ if (isset($_POST["guardar"])) {
     //  FOTO
     if (!empty($fotoNombre)) {
         $fotoFinal = time() . "_" . $fotoNombre;
-        move_uploaded_file($rutaTemporal, "/SAFEN/img/" . $fotoFinal);
+        move_uploaded_file($rutaTemporal, "img/" . $fotoFinal);
 
         $sql .= ", foto='$fotoFinal'";
     }
