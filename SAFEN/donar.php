@@ -61,7 +61,7 @@ if (isset($_POST["donar"])) {
 
 <body>
     <div id="alerta" class="alerta"></div>
- <a href="login.php"  class="back-btn">
+ <a href="donaciones.php"  class="back-btn">
     ←
 </a>
 

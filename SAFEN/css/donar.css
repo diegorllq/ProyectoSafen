@@ -52,7 +52,7 @@ body{
 
 .donar-left h1{
   color:#e91e63;
-  font-size:45px;
+  font-size:35px;
   margin-bottom:20px;
   text-align:left;
 }
@@ -110,6 +110,8 @@ body{
   align-items:center;
   text-align:center;
   padding:40px;
+   border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
 }
 
 .donar-right h2{
