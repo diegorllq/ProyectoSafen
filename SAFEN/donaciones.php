@@ -31,26 +31,27 @@
 
 </header>
 
-    <section class="donacion-info">
+   <div class="donacion-right">
 
-<div class="donacion-left">
-<h2>¡TÚ DONACIÓN NOS AYUDA A SEGUIR!</h2>
-<a href="donar.php" class="btn-donar">
- ¡DONA AHORA!
-</a>
-</div>
+   
+    <div class="overlay">
+      <h3>Juntos podemos hacer la diferencia</h3>
+    </div>
 
-<div class="donacion-right">
+    
+    <div class="imagenes">
+      <img src="/SAFEN/img/image1.png">
+      <img src="/SAFEN/img/image2.png">
+      <img src="/SAFEN/img/image3.png">
+     
+    </div>
 
-<div class="imagenes">
-  <img src="/SAFEN/img/image1.png" alt="">
-  <img src="/SAFEN/img/image2.png" alt="">
-  <img src="/SAFEN/img/image3.png" alt="">
-</div>
+    <p class="mensaje">
+      Tu ayuda puede devolver esperanza a quienes lo perdieron todo.
+    </p>
 
-<p>Tu ayuda puede devolver esperanza a quienes lo perdieron todo.</p>
-</div>
+  </div>
 
-    </section>
+</section>
 </body>
 </html>

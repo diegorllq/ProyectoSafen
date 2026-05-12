@@ -28,74 +28,85 @@ header{
     z-index: 2;
   }
 
-  .content {
-    background: #fff;
-    height: 300px;
+  .donacion-info{
+    display: flex;
+    height: 100vh;
+
   }
-  .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.35); /* controla la oscuridad */
-  z-index: 1;
-}
-
-.donacion-info{
-  display:flex;
-  padding:60px;
-  background:#f5f5f5;
-  align-items:center;
-  justify-content:space-between;
-}
 .donacion-left{
-  width:40%;
-}
+  width: 40%;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
+}
 .donacion-left h2{
-  color:#2d4a2d;
-  font-size:22px;
-  margin-bottom:20px;
+  color:#d81b60;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+
 }
 .btn-donar{
-  display:inline-block;
-  padding:15px 30px;
   background:#6c8fa3;
-  color:white;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn-donar:hover{
-  background:#557c91;
-  transform:scale(1.05);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 .donacion-right{
-  width:55%;
-  text-align:center;
+  width: 60%;
+   background:#0c0f2c;
+   position: relative;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+.donacion-right::before{
+  content: "";
+  position: absolute;
+  left: -120px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #f3f3f3;
+   border-top-right-radius:140px;
+  border-bottom-right-radius:140px;
+}
+.overlay{
+  position: absolute;
+  top: 80px;
+  z-index: 3;
+  color: white;
+  text-align: center;
+}
+.overlay h3{
+  font-size: 26px;
+  font-weight: 600;
 }
 .imagenes{
-  display:flex;
-  gap:15px;
-  background:#1c2147;
-  padding:10px;
-  border-radius:10px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: -40px;
+  z-index: 2;
 }
-
 .imagenes img{
-  width:33%;
-  border-radius:5px;
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
-
-
-.donacion-right p{
-  margin-top:15px;
-  font-style:italic;
+.mensaje{
+  color:white;
+  margin-top:20px;
+  max-width:400px;
+  text-align:center;
 }
 
