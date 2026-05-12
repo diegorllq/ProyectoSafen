@@ -31,6 +31,9 @@ header{
   .donacion-info{
     display: flex;
     height: 100vh;
+    margin-top: -120px; 
+  position: relative;
+  z-index: 3;
 
   }
 .donacion-left{
@@ -60,12 +63,15 @@ header{
 }
 .donacion-right{
   width: 60%;
-   background:#0c0f2c;
-   position: relative;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   overflow: hidden;
+  background:#0c0f2c;
+  position: relative;
+
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
 }
 .donacion-right::before{
   content: "";
