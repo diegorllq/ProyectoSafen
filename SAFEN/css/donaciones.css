@@ -46,13 +46,25 @@ header{
 
 .donacion-info{
   display:flex;
-  padding:60px;
-  background:#f5f5f5;
-  align-items:center;
-  justify-content:space-between;
+  height:420px;
+  margin-top:-120px;
+  position:relative;
+  z-index:3;
 }
 .donacion-left{
   width:40%;
+   background:#f5f5f5;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  border-top-right-radius:120px;
+  border-bottom-right-radius:120px;
+
+  z-index:2;
 }
 
 .donacion-left h2{
@@ -75,13 +87,44 @@ header{
   background:#557c91;
   transform:scale(1.05);
 }
+.titulo{
+  position: absolute;
+  top: 40px;
+  font-size: 24px;
+  z-index: 2;
+}
 .donacion-right{
-  width:55%;
+  width:60%;
+  background:#1c2147;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+  color:white;
   text-align:center;
 }
+.donacion-right::before{
+  content: "";
+  position: absolute;
+  left: -100PX;
+  width: 200PX;
+  height: 100%;
+  background: #f5f5f5;
+
+  border-top-right-radius:120px;
+  border-bottom-right-radius:120px;
+}
 .imagenes{
+  position: absolute;
+  top: 100px;
   display:flex;
-  gap:15px;
+  gap:20px;
+  z-index: 2;
+  left:50%;
+  transform: translateX(-50%);
   background:#1c2147;
   padding:10px;
   border-radius:10px;
@@ -89,12 +132,18 @@ header{
 }
 
 .imagenes img{
-  width:33%;
-  border-radius:5px;
+ width:180px;
+  height:250px;
+  object-fit:cover;
+
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
 
 
 .donacion-right p{
-  margin-top:15px;
+  position:absolute;
+  bottom:40px;
+  max-width:400px;
   font-style:italic;
 }
