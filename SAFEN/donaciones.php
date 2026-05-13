@@ -39,12 +39,7 @@
     </div>
 
     
-    <div class="imagenes">
-      <img src="/SAFEN/img/image1.png">
-      <img src="/SAFEN/img/image2.png">
-      <img src="/SAFEN/img/image3.png">
-     
-    </div>
+   
 
     <p class="mensaje">
       Tu ayuda puede devolver esperanza a quienes lo perdieron todo.
@@ -52,6 +47,13 @@
 
   </div>
 
+   <div class="imagenes">
+      <img src="/SAFEN/img/image1.png">
+      <img src="/SAFEN/img/image2.png">
+      <img src="/SAFEN/img/image3.png">
+     
+    </div>
+    
 </section>
 </body>
 </html>
