@@ -88,10 +88,12 @@ header{
   transform:scale(1.05);
 }
 .titulo{
-  position: absolute;
-  top: 40px;
-  font-size: 24px;
-  z-index: 2;
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:24px;
+  z-index:2;
 }
 .donacion-right{
   width:60%;
@@ -119,21 +121,22 @@ header{
 }
 .imagenes{
   position: absolute;
-  top: 100px;
-  display:flex;
-  gap:20px;
-  z-index: 2;
-  left:50%;
+  top: 110px;
+  left: 50%;
   transform: translateX(-50%);
-  background:#1c2147;
-  padding:10px;
-  border-radius:10px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 20px;
+  
+  background: #1c2147;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.4);
+  z-index: 2;
 }
 
 .imagenes img{
- width:180px;
-  height:250px;
+ width:160px;
+  height:230px;
   object-fit:cover;
 
   border-radius:20px;
@@ -142,8 +145,10 @@ header{
 
 
 .donacion-right p{
-  position:absolute;
+   position:absolute;
   bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
   max-width:400px;
   font-style:italic;
 }
