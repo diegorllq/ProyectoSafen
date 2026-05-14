@@ -16,8 +16,10 @@
 <div class="hero-text">
 
 <!-- Texto sobre la imagen -->
-<h1>Conectamos ayuda con quienes</h1>
-<p>más lo necesitan</p>
+<h1>Conectamos ayuda con quienes
+  <span>más lo necesitan</span>
+</h1>
+
 
 </div>
   <!-- Curvas más altas pero rectas -->
