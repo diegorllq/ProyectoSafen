@@ -13,7 +13,13 @@
 <div class="hero">
   <img src="/SAFEN/img/img-donaciones.png" alt="imagen">
 
+<div class="hero-text">
 
+<!-- Texto sobre la imagen -->
+<h1>Haz la diferencia hoy</h1>
+<p>Tu ayuda puede cambiar vidas en segundos</p>
+
+</div>
   <!-- Curvas más altas pero rectas -->
   <svg class="waves" viewBox="0 0 1440 180" preserveAspectRatio="none">
     <path fill="#ffffff" d="
@@ -41,6 +47,8 @@
 </div>
 
 <div class="donacion-right">
+
+<h3 class="titulo">Juntos podemos hacer la diferencia</h3>
 
 <div class="imagenes">
   <img src="/SAFEN/img/image1.png" alt="">
