@@ -16,8 +16,8 @@
 <div class="hero-text">
 
 <!-- Texto sobre la imagen -->
-<h1>Haz la diferencia hoy</h1>
-<p>Tu ayuda puede cambiar vidas en segundos</p>
+<h1>Conectamos ayuda con quienes</h1>
+<p>más lo necesitan</p>
 
 </div>
   <!-- Curvas más altas pero rectas -->
