@@ -53,7 +53,9 @@ header{
 }
 .donacion-left{
   width:40%;
-   display:flex;
+   background:#f5f5f5;
+
+  display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
@@ -95,7 +97,9 @@ header{
 }
 .donacion-right{
   width:60%;
- display:flex;
+  background:#1c2147;
+
+  display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
@@ -135,7 +139,7 @@ header{
   height:230px;
   object-fit:cover;
 
-  border-radius:5px;
+  border-radius:20px;
   box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
 
@@ -147,5 +151,5 @@ header{
   transform:translateX(-50%);
   max-width:400px;
   font-style:italic;
-margin-top: 30px;
 }
+
