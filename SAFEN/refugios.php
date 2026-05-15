@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="/SAFEN/css/navbar.css">
 </head>
 <body>
-    <?php include("navbar.php"); ?>
+    <header><?php include("navbar.php"); ?></header>
     <!--comienzo refugios-->
     <main class="main-wrapper">
         <header class="header">
