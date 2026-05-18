@@ -11,17 +11,19 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-.navbar {
-    position: fixed; /* 🔥 clave */
+.navbar{
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 65px;
+    height: 70px;
+    
     background-color: #414261;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 .nav-icons-wrapper {
@@ -34,9 +36,8 @@ body {
     font-size: 1.5rem;
 }
 
-/* ================= CONTENIDO ================= */
 .main-wrapper {
-    padding: 110px 5% 0 5%; /* 🔥 espacio para que no choque con navbar */
+    padding: 110px 5% 0 5%; 
 }
 
 /* HEADER */
