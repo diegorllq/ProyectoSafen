@@ -5,28 +5,41 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-body {
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
-/* NAVBAR: Iconos muy separados[cite: 2] */
 .navbar {
-    background-color: #414261;
+    position: fixed;   /* se queda arriba */
+    top: 0;
+    left: 0;
+    width: 100%;       /* ocupa TODO el ancho */
     height: 65px;
+    background-color: #414261;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 9999;     /* siempre encima */
 }
 
+/* CONTENEDOR INTERNO */
 .nav-icons-wrapper {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
+    padding: 0 40px;   /* separación lateral */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     color: white;
     font-size: 1.5rem;
 }
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+     padding-top: 65px;
+}
+
+
 
 /* CONTENEDOR PRINCIPAL */
 .main-wrapper {
