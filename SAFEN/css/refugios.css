@@ -241,6 +241,8 @@ p { color: #333; margin-top: 2px; }
 
 .back-arrow { background: none; border: 2px solid white; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; transform: rotate(180deg); float: right; }
 
+
+
 header {
     position: fixed;
     top: 0;
@@ -274,4 +276,35 @@ header .nav-icons-wrapper {
 /* EMPUJAR TODO HACIA ABAJO */
 .main-wrapper {
     margin-top: 90px !important;
+}
+header {
+    width: 100%;
+    height: 65px; /* MISMO alto que navbar */
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 65px;
+    background-color: #414261;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido interno */
+.nav-icons-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Empuja el contenido hacia abajo */
+.main-wrapper {
+    margin-top: 20px; /* pequeño espacio debajo */
 }
