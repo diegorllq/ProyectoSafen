@@ -89,20 +89,15 @@ function showToast(message, isError = false) {
     setTimeout(() => toastEl.classList.remove('visible'), 2400);
 }
 
-//  CARGAR DESDE DB
-async function loadLocations() {
-    try {
-        const res = await fetch('/api/ubicaciones');
-        locations = await res.json();
+// ⚠️ DESACTIVADO (hasta que tengas endpoint para listar)
+// async function loadLocations() {
+//     const res = await fetch('obtener_ubicaciones.php');
+//     locations = await res.json();
+//     locations.forEach(loc => addMarkerToMap(loc));
+//     renderLocationsList();
+// }
 
-        locations.forEach(loc => addMarkerToMap(loc));
-        renderLocationsList();
-    } catch (e) {
-        console.error(e);
-    }
-}
-
-//  GUARDAR EN DB
+// ✅ GUARDAR EN PHP
 async function saveLocation() {
     if (!pendingLatLng) return showToast('Selecciona el mapa', true);
     if (!nameInput.value.trim()) return showToast('Pon un nombre', true);
@@ -116,7 +111,7 @@ async function saveLocation() {
     };
 
     try {
-        const res = await fetch('/api/ubicaciones', {
+        const res = await fetch('guardar_ubicacion.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newLocation)
@@ -131,6 +126,7 @@ async function saveLocation() {
         showToast('Guardado ✅');
 
     } catch (e) {
+        console.error(e);
         showToast('Error al guardar ❌', true);
     }
 
@@ -142,16 +138,10 @@ async function saveLocation() {
     updatePendingCoordsUI();
 }
 
-//  ELIMINAR EN DB
-async function deleteLocation(id) {
-    await fetch(`/api/ubicaciones/${id}`, { method: 'DELETE' });
-
-    map.removeLayer(markers[id]);
-    delete markers[id];
-
-    locations = locations.filter(l => l.id !== id);
-    renderLocationsList();
-}
+// ⚠️ ELIMINAR DESACTIVADO (hasta backend)
+// async function deleteLocation(id) {
+//     await fetch(`eliminar_ubicacion.php?id=${id}`, { method: 'DELETE' });
+// }
 
 // Marcador
 function addMarkerToMap(loc) {
@@ -180,7 +170,6 @@ function renderLocationsList() {
         card.innerHTML = `
             <h4>${loc.name}</h4>
             <p>${loc.desc || ''}</p>
-            <button onclick="deleteLocation('${loc.id}')">Eliminar</button>
         `;
         locationsList.appendChild(card);
     });
@@ -219,4 +208,4 @@ saveBtn.onclick = saveLocation;
 
 // Init
 initColorPicker();
-loadLocations();
+// loadLocations(); // desactivado por ahora
