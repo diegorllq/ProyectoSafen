@@ -5,8 +5,6 @@ const COLORS = {
     orange: { hex: '#e8a04a', label: 'Naranja' },
 };
 
-const STORAGE_KEY = 'mis_ubicaciones_v1';
-
 let locations = [];
 let pendingLatLng = null;
 let selectedColor = 'red';
@@ -32,35 +30,130 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
-// Cargar ubicaciones desde BD
-function loadLocations() {
-    fetch('obtener_ubicaciones.php')
-    .then(res => res.json())
-    .then(data => {
-        locations = data;
-        locations.forEach(loc => addMarkerToMap(loc));
-        renderLocationsList();
-    });
-}
+// Leyenda
+const legend = L.control({ position: 'bottomleft' });
+legend.onAdd = function() {
+    const div = L.DomUtil.create('div', 'leyenda');
+    div.innerHTML = `
+        <b>Impacto del desastre</b>
+        <div>${createFlagSVG('#e05c5c', 16)} Alta urgencia</div>
+        <div>${createFlagSVG('#e8a04a', 16)} Media</div>
+        <div>${createFlagSVG('#5ec49a', 16)} Leve</div>
+    `;
+    return div;
+};
+legend.addTo(map);
 
-// Crear SVG
+// SVG bandera
 function createFlagSVG(color, size = 24) {
     return `<svg width="${size}" height="${size}" viewBox="0 0 24 24">
         <path d="M5 21V4" stroke="#555" stroke-width="2"/>
-        <path d="M5 4C5 4 6.5 3 9.5 3C12.5 3 14 5 17 5C20 5 21 4 21 4V14C21 14 20 15 17 15C14 15 12.5 13 9.5 13C6.5 13 5 14 5 14" fill="${color}"/>
+        <path d="M5 4C5 4 6.5 3 9.5 3C12.5 3 14 5 17 5C20 5 21 4 21 4V14C21 14 20 15 17 15C14 15 12.5 13 9.5 13C6.5 13 5 14 5 14"
+        fill="${color}" stroke="${color}"/>
     </svg>`;
 }
 
-// Icono
+// Icono mapa
 function createFlagIcon(color) {
     return L.divIcon({
         className: 'flag-icon',
-        html: createFlagSVG(color, 30),
-        iconSize: [30, 30]
+        html: createFlagSVG(color, 32),
+        iconSize: [32, 40],
+        iconAnchor: [6, 40]
     });
 }
 
-// Agregar marcador
+// Selector colores
+function initColorPicker() {
+    colorOptions.innerHTML = '';
+    Object.keys(COLORS).forEach(colorKey => {
+        const btn = document.createElement('button');
+        btn.className = `color-btn ${colorKey === selectedColor ? 'selected' : ''}`;
+        btn.style.backgroundColor = COLORS[colorKey].hex;
+        btn.onclick = (e) => selectColor(colorKey, e);
+        colorOptions.appendChild(btn);
+    });
+}
+
+function selectColor(colorKey, e) {
+    selectedColor = colorKey;
+    document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('selected'));
+    e.target.classList.add('selected');
+    updatePendingMarker();
+}
+
+// Toast
+function showToast(message, isError = false) {
+    toastEl.textContent = message;
+    toastEl.className = `toast visible ${isError ? 'error' : 'success'}`;
+    setTimeout(() => toastEl.classList.remove('visible'), 2400);
+}
+
+//  CARGAR DESDE DB
+async function loadLocations() {
+    try {
+        const res = await fetch('/api/ubicaciones');
+        locations = await res.json();
+
+        locations.forEach(loc => addMarkerToMap(loc));
+        renderLocationsList();
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+//  GUARDAR EN DB
+async function saveLocation() {
+    if (!pendingLatLng) return showToast('Selecciona el mapa', true);
+    if (!nameInput.value.trim()) return showToast('Pon un nombre', true);
+
+    const newLocation = {
+        name: nameInput.value.trim(),
+        desc: descInput.value.trim(),
+        lat: pendingLatLng.lat,
+        lng: pendingLatLng.lng,
+        color: selectedColor
+    };
+
+    try {
+        const res = await fetch('/api/ubicaciones', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newLocation)
+        });
+
+        const saved = await res.json();
+
+        locations.unshift(saved);
+        addMarkerToMap(saved);
+        renderLocationsList();
+
+        showToast('Guardado ✅');
+
+    } catch (e) {
+        showToast('Error al guardar ❌', true);
+    }
+
+    // limpiar
+    nameInput.value = '';
+    descInput.value = '';
+    if (pendingMarker) map.removeLayer(pendingMarker);
+    pendingLatLng = null;
+    updatePendingCoordsUI();
+}
+
+//  ELIMINAR EN DB
+async function deleteLocation(id) {
+    await fetch(`/api/ubicaciones/${id}`, { method: 'DELETE' });
+
+    map.removeLayer(markers[id]);
+    delete markers[id];
+
+    locations = locations.filter(l => l.id !== id);
+    renderLocationsList();
+}
+
+// Marcador
 function addMarkerToMap(loc) {
     const marker = L.marker([loc.lat, loc.lng], {
         icon: createFlagIcon(COLORS[loc.color].hex)
@@ -70,11 +163,11 @@ function addMarkerToMap(loc) {
     markers[loc.id] = marker;
 }
 
-// Render lista
+// Lista
 function renderLocationsList() {
     locationsList.innerHTML = '';
 
-    if (locations.length === 0) {
+    if (!locations.length) {
         emptyState.style.display = 'block';
         return;
     }
@@ -93,62 +186,37 @@ function renderLocationsList() {
     });
 }
 
-// Guardar ubicación (BD)
-function saveLocation() {
-    if (!pendingLatLng || !nameInput.value.trim()) return;
+// Pendiente
+function updatePendingMarker() {
+    if (pendingMarker) map.removeLayer(pendingMarker);
 
-    const newLocation = {
-        id: 'loc_' + Date.now(),
-        name: nameInput.value.trim(),
-        desc: descInput.value.trim(),
-        lat: pendingLatLng.lat,
-        lng: pendingLatLng.lng,
-        color: selectedColor
-    };
-
-    fetch('guardar_ubicacion.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newLocation)
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            locations.unshift(newLocation);
-            addMarkerToMap(newLocation);
-            renderLocationsList();
-        }
-    });
+    if (pendingLatLng) {
+        pendingMarker = L.marker([pendingLatLng.lat, pendingLatLng.lng], {
+            icon: createFlagIcon(COLORS[selectedColor].hex),
+            opacity: 0.7
+        }).addTo(map);
+    }
 }
 
-// Eliminar ubicación (BD)
-function deleteLocation(id) {
-    fetch('eliminar_ubicacion.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: id })
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            const marker = markers[id];
-            if (marker) {
-                map.removeLayer(marker);
-                delete markers[id];
-            }
-
-            locations = locations.filter(l => l.id !== id);
-            renderLocationsList();
-        }
-    });
+function updatePendingCoordsUI() {
+    if (pendingLatLng) {
+        pendingCoordsEl.innerHTML = `${pendingLatLng.lat.toFixed(5)}, ${pendingLatLng.lng.toFixed(5)}`;
+    } else {
+        pendingCoordsEl.innerHTML = 'Haz clic en el mapa';
+    }
 }
 
 // Eventos
-map.on('click', function(e) {
+map.on('click', (e) => {
     pendingLatLng = e.latlng;
+    updatePendingMarker();
+    updatePendingCoordsUI();
 });
 
+toggleFormBtn.onclick = () => addForm.classList.toggle('visible');
+nameInput.oninput = () => saveBtn.disabled = !(pendingLatLng && nameInput.value.trim());
 saveBtn.onclick = saveLocation;
 
 // Init
+initColorPicker();
 loadLocations();
