@@ -89,15 +89,21 @@ function showToast(message, isError = false) {
     setTimeout(() => toastEl.classList.remove('visible'), 2400);
 }
 
-// ⚠️ DESACTIVADO (hasta que tengas endpoint para listar)
-// async function loadLocations() {
-//     const res = await fetch('obtener_ubicaciones.php');
-//     locations = await res.json();
-//     locations.forEach(loc => addMarkerToMap(loc));
-//     renderLocationsList();
-// }
+//  OBTENER DESDE BD
+async function loadLocations() {
+    try {
+        const res = await fetch('obtener_ubicaciones.php');
+        locations = await res.json();
 
-// ✅ GUARDAR EN PHP
+        locations.forEach(loc => addMarkerToMap(loc));
+        renderLocationsList();
+    } catch (e) {
+        console.error(e);
+        showToast('Error al cargar datos ❌', true);
+    }
+}
+
+//  GUARDAR EN BD
 async function saveLocation() {
     if (!pendingLatLng) return showToast('Selecciona el mapa', true);
     if (!nameInput.value.trim()) return showToast('Pon un nombre', true);
@@ -134,14 +140,27 @@ async function saveLocation() {
     nameInput.value = '';
     descInput.value = '';
     if (pendingMarker) map.removeLayer(pendingMarker);
+    pendingMarker = null;
     pendingLatLng = null;
     updatePendingCoordsUI();
 }
 
-// ⚠️ ELIMINAR DESACTIVADO (hasta backend)
-// async function deleteLocation(id) {
-//     await fetch(`eliminar_ubicacion.php?id=${id}`, { method: 'DELETE' });
-// }
+//  ELIMINAR EN BD
+async function deleteLocation(id) {
+    try {
+        await fetch(`eliminar_ubicacion.php?id=${id}`);
+
+        map.removeLayer(markers[id]);
+        delete markers[id];
+
+        locations = locations.filter(l => l.id !== id);
+        renderLocationsList();
+
+        showToast('Eliminado 🗑️');
+    } catch (e) {
+        showToast('Error al eliminar ❌', true);
+    }
+}
 
 // Marcador
 function addMarkerToMap(loc) {
@@ -170,6 +189,7 @@ function renderLocationsList() {
         card.innerHTML = `
             <h4>${loc.name}</h4>
             <p>${loc.desc || ''}</p>
+            <button onclick="deleteLocation('${loc.id}')">Eliminar</button>
         `;
         locationsList.appendChild(card);
     });
@@ -208,4 +228,4 @@ saveBtn.onclick = saveLocation;
 
 // Init
 initColorPicker();
-// loadLocations(); // desactivado por ahora
+loadLocations();
