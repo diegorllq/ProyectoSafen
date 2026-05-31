@@ -123,10 +123,23 @@ async function saveLocation() {
             body: JSON.stringify(newLocation)
         });
 
-        const saved = await res.json();
+        const response = await res.json();
 
-        locations.unshift(saved);
-        addMarkerToMap(saved);
+if (!response.success) {
+    throw new Error(response.error || "Error al guardar");
+}
+
+const saved = {
+    id: response.id,
+    name: response.name,
+    desc: response.desc,
+    lat: response.lat,
+    lng: response.lng,
+    color: response.color
+};
+
+locations.unshift(saved);
+addMarkerToMap(saved);
         renderLocationsList();
 
         showToast('Guardado ✅');
