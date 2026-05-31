@@ -2,7 +2,7 @@
 session_start();
 include("conexion.php");
 
-// 🔒 VALIDAR SESIÓN
+// VALIDAR SESIÓN
 if (!isset($_SESSION["id"])) {
   header("Location: login.php");
   exit();
@@ -66,7 +66,7 @@ if (!isset($_SESSION["id"])) {
                     <span>Haz clic en el mapa para fijar un punto</span>
                 </div>
                 
-                <button class="btn-primary" id="saveBtn" disabled>
+                <button type="button" class="btn-primary" id="saveBtn" disabled>
                     Seleccionar ubicacion
                 </button>
             </div>

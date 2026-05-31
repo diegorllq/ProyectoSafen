@@ -89,7 +89,7 @@ function showToast(message, isError = false) {
     setTimeout(() => toastEl.classList.remove('visible'), 2400);
 }
 
-// OBTENER DESDE BD
+// OBTENER
 async function loadLocations() {
     try {
         const res = await fetch('obtener_ubicaciones.php');
@@ -103,17 +103,10 @@ async function loadLocations() {
     }
 }
 
-// GUARDAR EN BD
+// GUARDAR
 async function saveLocation() {
-    if (!pendingLatLng) {
-        showToast('Haz clic en el mapa primero', true);
-        return;
-    }
-
-    if (!nameInput.value.trim()) {
-        showToast('Escribe un nombre', true);
-        return;
-    }
+    if (!pendingLatLng) return showToast('Haz clic en el mapa primero', true);
+    if (!nameInput.value.trim()) return showToast('Escribe un nombre', true);
 
     const newLocation = {
         name: nameInput.value.trim(),
@@ -169,15 +162,25 @@ async function saveLocation() {
     updatePendingCoordsUI();
 }
 
-// ELIMINAR EN BD
+// 🔥 ELIMINAR (CORREGIDO)
 async function deleteLocation(id) {
+
+    if (!confirm("¿Eliminar esta ubicación?")) return;
+
     try {
-        await fetch('eliminar_ubicacion.php', {
+        const res = await fetch('eliminar_ubicacion.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id })
+            body: JSON.stringify({ id: id })
         });
 
+        const response = await res.json();
+
+        if (!response.success) {
+            throw new Error("No se pudo eliminar en la BD");
+        }
+
+        // SOLO eliminar si la BD respondió bien
         map.removeLayer(markers[id]);
         delete markers[id];
 
@@ -187,6 +190,7 @@ async function deleteLocation(id) {
         showToast('Ubicación eliminada 🗑️');
 
     } catch (e) {
+        console.error(e);
         showToast('Error al eliminar ❌', true);
     }
 }
@@ -254,9 +258,8 @@ map.on('click', (e) => {
 toggleFormBtn.onclick = () => addForm.classList.toggle('visible');
 nameInput.oninput = () => saveBtn.disabled = !(pendingLatLng && nameInput.value.trim());
 
-// AQUI ESTA EL CAMBIO POR SI ACASO
 saveBtn.onclick = (e) => {
-    e.preventDefault(); // 
+    e.preventDefault();
     saveLocation();
 };
 
