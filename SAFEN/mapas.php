@@ -66,7 +66,7 @@ if (!isset($_SESSION["id"])) {
                     <span>Haz clic en el mapa para fijar un punto</span>
                 </div>
                 
-                <button type="button" class="btn-primary" id="saveBtn" disabled>
+                <button class="btn-primary" id="saveBtn" disabled>
                     Seleccionar ubicacion
                 </button>
             </div>
