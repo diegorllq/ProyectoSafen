@@ -6,6 +6,7 @@ if (!$conn) {
 }
 
 
+// 🔥 SOLUCIÓN
 $conexion = $conn;
 
 ?>

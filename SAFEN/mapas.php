@@ -25,12 +25,12 @@ if (!isset($_SESSION["id"])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/SAFEN/css/mapa.css">
     <link rel="stylesheet" href="/SAFEN/css/navbar.css">
+    
 
 </head>
-
 <body>
 
-  <?php include("navbar.php"); ?>
+ <?php include("navbar.php"); ?>
 
     <h1>Lo que esta pasando <span>ahora...</span></h1>
     
