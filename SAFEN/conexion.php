@@ -5,7 +5,6 @@ if (!$conn) {
     die("Error de conexión");
 }
 
-
 // 🔥 SOLUCIÓN
 $conexion = $conn;
 

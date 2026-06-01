@@ -253,12 +253,7 @@ map.on('click', (e) => {
 
 toggleFormBtn.onclick = () => addForm.classList.toggle('visible');
 nameInput.oninput = () => saveBtn.disabled = !(pendingLatLng && nameInput.value.trim());
-
-// AQUI ESTA EL CAMBIO POR SI ACASO
-saveBtn.onclick = (e) => {
-    e.preventDefault(); // 
-    saveLocation();
-};
+saveBtn.onclick = saveLocation;
 
 // Init
 initColorPicker();
