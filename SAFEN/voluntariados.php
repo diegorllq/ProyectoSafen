@@ -9,7 +9,7 @@
     <title>Instituciones Humanitarias</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/SAFEN/voluntariado.css">
+    <link rel="stylesheet" href="/SAFEN/css/voluntariado.css">
     <link rel="stylesheet" href="/SAFEN/css/navbar.css">
 
     <!-- GOOGLE FONTS -->
