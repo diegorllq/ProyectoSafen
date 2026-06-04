@@ -6,6 +6,7 @@
     <title>Donaciones</title>
     <link rel="stylesheet" href="/SAFEN/css/donaciones.css">
     <link rel="stylesheet" href="/SAFEN/css/navbar.css">
+    <link rel="stylesheet" href="/SAFEN/css/footer.css">
 </head>
 <body>
     <header class="header">
@@ -62,5 +63,6 @@
 </div>
 
     </section>
+    <?php include("footer.php"); ?>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/SAFEN/css/voluntariado.css">
     <link rel="stylesheet" href="/SAFEN/css/navbar.css">
+    <link rel="stylesheet" href="/SAFEN/css/footer.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -354,7 +355,7 @@
     <!-- JAVASCRIPT -->
     <script src="/SAFEN/movilidad.js"></script>
 
-   
+   <?php include("footer.php"); ?>
 
 </body>
 
