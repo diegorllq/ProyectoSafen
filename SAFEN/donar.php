@@ -53,7 +53,7 @@ if (isset($_POST["donar"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donar</title>
 <link rel="stylesheet" href="/SAFEN/css/alertas.css">
 <link rel="stylesheet" href="/SAFEN/css/donar.css">
 

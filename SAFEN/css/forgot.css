@@ -37,7 +37,7 @@ body{
     position: relative;
 }
 .forgot-container h2{
-    color: #e91e63;
+    color: #363a73;
     font-size: 28px;
     margin-bottom: 10px;
 
@@ -61,7 +61,7 @@ body{
     border-color: #e91e63;
 }
 .forgot-container button {
-    background: linear-gradient(135deg, #e91e63, #ff4d88);
+    background: linear-gradient(135deg, #363a73, #131b58);
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -92,7 +92,7 @@ body{
 /* BOTÓN */
 .link a {
     display: inline-block;
-    background: linear-gradient(135deg, #e91e63, #ff4d88);
+    background: linear-gradient(135deg, #363a73, #131b58);
     color: #fff;
     padding: 10px 18px;
     border-radius: 20px;

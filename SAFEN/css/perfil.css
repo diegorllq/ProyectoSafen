@@ -47,7 +47,7 @@ body{
 }
 
 .right h1{
-    color:#ff2e63;
+    color: #363a73;
     font-size:50px;
     margin-bottom:30px;
 }
@@ -77,7 +77,7 @@ body{
 }
 
 .btn-guardar{
-    background:#ff2e63;
+    background: #363a73;
     color:white;
     border:none;
     padding:12px 25px;
@@ -86,7 +86,7 @@ body{
 }
 
 .btn-logout{
-    background:#15173d;
+    background: #363a73;
     color:white;
     border:none;
     padding:12px 25px;
