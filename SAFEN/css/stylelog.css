@@ -63,7 +63,7 @@ body{
 .container-form h2{
     font-size: 40px;
     margin-bottom: 20px;
-    color: #DE1A58;
+    color: #131b58 ;
 }
 
 .container-input input{
@@ -91,7 +91,7 @@ body{
     border-radius:10px;
     cursor:pointer;
     color:#F5F5F5;
-    background-color: #6594B1;
+    background-color: #6b6b9d;
 }
 
 

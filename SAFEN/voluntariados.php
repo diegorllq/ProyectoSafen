@@ -81,7 +81,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.11 AM.jpeg" alt="Cruz Roja">
+                            <img src="/SAFEN/img/Cruz-roja.jpeg" alt="Cruz Roja">
 
                         </a>
 
@@ -119,7 +119,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.13 AM.jpeg" alt="Cruz Verde">
+                            <img src="/SAFEN/img/Cruz-verde.jpeg" alt="Cruz Verde">
 
                         </a>
 
@@ -157,7 +157,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.10 AM.jpeg" alt="Comandos">
+                            <img src="/SAFEN/img/Comando.jpeg" alt="Comandos">
 
                         </a>
 
@@ -195,7 +195,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.11 AM (1).jpeg" alt="Bomberos">
+                            <img src="/SAFEN/img/Bomberos.jpeg" alt="Bomberos">
 
                         </a>
 
@@ -233,7 +233,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.12 AM.jpeg" alt="Protección Civil">
+                            <img src="/SAFEN/img/Proteccion.jpeg" alt="Protección Civil">
 
                         </a>
 
@@ -271,7 +271,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.12 AM (1).jpeg" alt="TECHO">
+                            <img src="/SAFEN/img/Techo.jpeg" alt="TECHO">
 
                         </a>
 
@@ -309,7 +309,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="WhatsApp Image 2026-05-17 at 12.55.12 AM (2).jpeg" alt="Hábitat">
+                            <img src="/SAFEN/img/Habitat.jpeg" alt="Hábitat">
 
                         </a>
 

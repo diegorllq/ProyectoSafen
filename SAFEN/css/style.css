@@ -59,7 +59,7 @@ header{
 }
 .left h1{
   font-size: 60px;
- color: #15173d;
+ color:  #131b58;
  margin: 0;
  font-family: 'Poppins', sans-serif;
 }
@@ -69,7 +69,7 @@ header{
 }
 .left button{
  
-  background: #ff2e63;
+  background: #363a73;
   color: white;
   border: none;
   padding: 8px 18px;
@@ -112,13 +112,13 @@ header{
 .about h2{
   font-family: 'Poppins', sans-serif;
   font-size: 50px;
-  color: #de1a58;
+  color: #131b58;
 }
 .about span{
   font-family: 'Satisfy', cursive;
 }
 .card{
-  background: #15173d;
+  background: #6b6b9d;
   color: white;
   width: 300px;
   padding: 60px 20px 30px;
