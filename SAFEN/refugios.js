@@ -170,14 +170,37 @@ const data = {
             };
             document.getElementById('dept-title').innerText = "Refugios en " + (titulos[dept] || dept);
             listContainer.innerHTML = (data[dept] || []).map(item => `
-                <div class="shelter-info-block">
-                    <h3 class="pink-title">${item.nombre}</h3>
-                    <div class="info-row"><span class="blue-icon">📍</span><strong>Ubicación</strong><p>${item.dirc}</p></div>
-                    <div class="info-row"><span class="blue-icon">📞</span><strong>Contacto</strong><p>${item.tel}</p></div>
-                    <div class="info-row"><span class="blue-icon">📎</span><strong>Descripción</strong><p>${item.desc}</p></div>
-                </div>
-                <hr class="shelter-hr">
-            `).join('');
+    <div class="shelter-info-block">
+
+        ${item.imagen ? `
+        <div class="shelter-modal-image"
+             style="background-image: url('${item.imagen}')">
+        </div>
+        ` : ''}
+
+        <h3 class="pink-title">${item.nombre}</h3>
+
+        <div class="info-row">
+            <span class="blue-icon">📍</span>
+            <strong>Ubicación</strong>
+            <p>${item.dirc}</p>
+        </div>
+
+        <div class="info-row">
+            <span class="blue-icon">📞</span>
+            <strong>Contacto</strong>
+            <p>${item.tel}</p>
+        </div>
+
+        <div class="info-row">
+            <span class="blue-icon">📎</span>
+            <strong>Descripción</strong>
+            <p>${item.desc}</p>
+        </div>
+
+    </div>
+    <hr class="shelter-hr">
+`).join('');
             document.getElementById('view-shelters').style.display = 'block';
         }
 
