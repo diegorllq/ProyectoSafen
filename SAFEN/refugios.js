@@ -22,33 +22,33 @@ const data = {
                 { nombre: "CENTRO OBRERO DR. MARIO ZAMORA", dirc: "Caserio el refugio canton el gramal", tel: "7686-0344", desc: "Espacios amplios para atender familias (Capacidad: 70 personas).", imagen:"/SAFEN/img/Chalatenango/CentroObreroDoctorMarioZamora.jpg.jpeg"}
             ],
             cuscatlan: [
-                { nombre: "ACOSAMA", dirc: "Calle principal de San Pedro Perulapán", tel: "7364-9543", desc: "Alojamiento temporal y espacios seguros (Capacidad: 90 personas)." },
-                { nombre: "IGLESIA SAN RAFAEL ARCÁNGEL", dirc: "Avenida Manuel Rico, Barrio el Centro, Suchitoto", tel: "7628-6942", desc: "Protección y alojamiento temporal (Capacidad: 30 personas)." },
-                { nombre: "IGLESIA ASAMBLEA DE DIOS JEHOVÁ NISSI", dirc: "Colonia y Avenida Las Mercedes, Suchitoto", tel: "7628-6942", desc: "Apoyo comunitario y espacios seguros (Capacidad: 30 personas)." },
-                { nombre: "S.U.M. ANEXO DISTRITO SAN RAMÓN", dirc: "Barrio el Centro, calle principal, San Ramón", tel: "7396-6483", desc: "Alojamiento y condiciones básicas (Capacidad: 30 personas)." },
-                { nombre: "EL MERCADO ANEXO COMUNAL", dirc: "Barrio el centro, Santa Cruz Analquito", tel: "7693-5787", desc: "Resguardo temporal y apoyo básico (Capacidad: 32 personas)." },
-                { nombre: "CENTRO DE CONVIVENCIA CIUDADANA", dirc: "Barrio Santa Lucia, Suchitoto", tel: "6007-0429", desc: "Instalaciones amplias y seguras (Capacidad: 68 personas)." }
+                { nombre: "ACOSAMA", dirc: "Calle principal de San Pedro Perulapán", tel: "7364-9543", desc: "Alojamiento temporal y espacios seguros (Capacidad: 90 personas).", imagen:"/SAFEN/img/Cuscatlán/Acosama.jpg.jpeg" },
+                { nombre: "IGLESIA SAN RAFAEL ARCÁNGEL", dirc: "Avenida Manuel Rico, Barrio el Centro, Suchitoto", tel: "7628-6942", desc: "Protección y alojamiento temporal (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cuscatlán/IglesiaSanRafaelArcangel.jpg.jpeg" },
+                { nombre: "IGLESIA ASAMBLEA DE DIOS JEHOVÁ NISSI", dirc: "Colonia y Avenida Las Mercedes, Suchitoto", tel: "7628-6942", desc: "Apoyo comunitario y espacios seguros (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cuscatlán/IglesiaAsambleaDeDiosJehovaNissi.jpg.jpeg" },
+                { nombre: "S.U.M. ANEXO DISTRITO SAN RAMÓN", dirc: "Barrio el Centro, calle principal, San Ramón", tel: "7396-6483", desc: "Alojamiento y condiciones básicas (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cuscatlán/SalonDeUsosMultiplesAnexoSanRamon.jpg.jpeg" },
+                { nombre: "EL MERCADO ANEXO COMUNAL", dirc: "Barrio el centro, Santa Cruz Analquito", tel: "7693-5787", desc: "Resguardo temporal y apoyo básico (Capacidad: 32 personas).", imagen:"/SAFEN/img/Cuscatlán/MercaditoAnexoComunal.jpg.jpeg" },
+                { nombre: "CENTRO DE CONVIVENCIA CIUDADANA", dirc: "Barrio Santa Lucia, Suchitoto", tel: "6007-0429", desc: "Instalaciones amplias y seguras (Capacidad: 68 personas).", imagen:"/SAFEN/img/Cuscatlán/CentroDeConvivenciaCuidadana.jpg.jpeg" }
             ],
             lalibertad: [
-                { nombre: "S.U.M. WALTER THILO DEININGER", dirc: "Frente a parque de Antiguo Cuscatlán", tel: "7630-9796", desc: "Amplios espacios de resguardo (Capacidad: 150 personas)." },
-                { nombre: "CASA COMUNAL CHILTIUPÁN", dirc: "Barrio Santo Domingo, calle principal, Chiltiupán", tel: "7923-2829", desc: "Protección y apoyo básico (Capacidad: 60 personas)." },
-                { nombre: "CASA COMUNAL EL ZONTE", dirc: "Cantón el Zonte, caserío Espíritu Santo", tel: "7704-9741", desc: "Alojamiento temporal y espacios seguros (Capacidad: 40 personas)." },
-                { nombre: "S.U.M. DE COLÓN", dirc: "Parque Comunal de Colón", tel: "7853-6631", desc: "Resguardo y atención básica (Capacidad: 40 personas)." },
-                { nombre: "CASA COMUNAL LAS CONCHITAS", dirc: "Colonia las Conchitas, Colón", tel: "7853-6631", desc: "Alojamiento temporal y apoyo (Capacidad: 30 personas)." },
-                { nombre: "CASA COMUNAL COMASAGUA", dirc: "Alcaldía de Comasagua", tel: "6017-0861", desc: "Protección y espacios seguros (Capacidad: 40 personas)." },
-                { nombre: "CASA COMUNAL HUIZÚCAR", dirc: "Barrio el centro, Huizúcar", tel: "7229-5855", desc: "Resguardo temporal y atención básica (Capacidad: 50 personas)." },
-                { nombre: "IGLESIA EL CALVARIO HUIZÚCAR", dirc: "Calle principal, barrio el calvario", tel: "7794-228", desc: "Alojamiento temporal y apoyo básico (Capacidad: 70 personas)." },
-                { nombre: "CENTRO OBRERO DR. HUMBERTO ROMERO", dirc: "Playa Conchalío km 37, La Libertad", tel: "7860-2001", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 100 personas)." },
-                { nombre: "CENTRO ESCOLAR SAN ARTURO", dirc: "Cantón Cangrejera km 45.5, Puerto de la Libertad", tel: "6929-5516", desc: "Resguardo temporal y áreas seguras (Capacidad: 134 personas)." }
+                { nombre: "S.U.M. WALTER THILO DEININGER", dirc: "Frente a parque de Antiguo Cuscatlán", tel: "7630-9796", desc: "Amplios espacios de resguardo (Capacidad: 150 personas).", imagen:"/SAFEN/img/La Libertad/SalonDeUsosMultiplesWalterThiloDeininger.jpg.jpeg"},
+                { nombre: "CASA COMUNAL CHILTIUPÁN", dirc: "Barrio Santo Domingo, calle principal, Chiltiupán", tel: "7923-2829", desc: "Protección y apoyo básico (Capacidad: 60 personas).", imagen:"/SAFEN/img/La Libertad/CasaComunalChiltiupan.jpg.jpeg"},
+                { nombre: "CASA COMUNAL EL ZONTE", dirc: "Cantón el Zonte, caserío Espíritu Santo", tel: "7704-9741", desc: "Alojamiento temporal y espacios seguros (Capacidad: 40 personas).", imagen:"/SAFEN/img/La Libertad/CasaComunalElZonte.jpg.jpeg" },
+                { nombre: "S.U.M. DE COLÓN", dirc: "Parque Comunal de Colón", tel: "7853-6631", desc: "Resguardo y atención básica (Capacidad: 40 personas).", imagen:"/SAFEN/img/La Libertad/SalonDeUsosMultiplesColonEnParqueComunalDeColon.jpg.jpeg"},
+                { nombre: "CASA COMUNAL LAS CONCHITAS", dirc: "Colonia las Conchitas, Colón", tel: "7853-6631", desc: "Alojamiento temporal y apoyo (Capacidad: 30 personas).", imagen:"/SAFEN/img/La Libertad/CasaComunalLasConchitas.jpg.jpeg" },
+                { nombre: "CASA COMUNAL COMASAGUA", dirc: "Alcaldía de Comasagua", tel: "6017-0861", desc: "Protección y espacios seguros (Capacidad: 40 personas).", imagen:"/SAFEN/img/La Libertad/CasaComunalComasagua.jpg.jpeg" },
+                { nombre: "CASA COMUNAL HUIZÚCAR", dirc: "Barrio el centro, Huizúcar", tel: "7229-5855", desc: "Resguardo temporal y atención básica (Capacidad: 50 personas).", imagen:"/SAFEN/img/La Libertad/CasaComunalHuizucar.jpg.jpeg" },
+                { nombre: "IGLESIA EL CALVARIO HUIZÚCAR", dirc: "Calle principal, barrio el calvario", tel: "7794-228", desc: "Alojamiento temporal y apoyo básico (Capacidad: 70 personas).", imagen:"/SAFEN/img/La Libertad/IglesiaElCalvarioHuizucar.jpg.jpeg" },
+                { nombre: "CENTRO OBRERO DR. HUMBERTO ROMERO", dirc: "Playa Conchalío km 37, La Libertad", tel: "7860-2001", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 100 personas).", imagen:"/SAFEN/img/La Libertad/CentroObrroDrHumbertoRomero.jpg.jpeg" },
+                { nombre: "CENTRO ESCOLAR SAN ARTURO", dirc: "Cantón Cangrejera km 45.5, Puerto de la Libertad", tel: "6929-5516", desc: "Resguardo temporal y áreas seguras (Capacidad: 134 personas).", imagen:"/SAFEN/img/La Libertad/CentroEscolarSanArturo.jpg.jpeg" }
             ],
             lapaz: [
-                { nombre: "IGLESIA ESPERANZA VIVA", dirc: "Barrio el centro, Santiago Nonualco", tel: "6135-5777", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 60 personas)." },
-                { nombre: "CASA COMUNAL CANTÓN COMALAPA", dirc: "Canton Comalapa KM 32 1/2 carreteta antigua a Zacatecoluca", tel: "7270-2131", desc: "Resguardo temporal y espacios seguros (Capacidad: 80 personas)." },
-                { nombre: "ANFITEATRO LA HERRADURA", dirc: "Barrio San Luis, calle Principal", tel: "7065-3686", desc: "Áreas amplias y seguras para emergencias (Capacidad: 40 personas)." },
-                { nombre: "CASA COMUNAL LAS ISLETAS", dirc: "Canton Las Isletas, San Pedro Masahuat", tel: "7592-4144", desc: "Protección y alojamiento temporal (Capacidad: 50 personas)." },
-                { nombre: "ESCUELA DE DESARROLLO HUMANO", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Resguardo temporal y apoyo básico (Capacidad: 30 personas)." },
-                { nombre: "POLIDEPORTIVO 27 DE SEPTIEMBRE", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Instalaciones amplias para desastres naturales (Capacidad: 60 personas)." },
-                { nombre: "CENTRO DEPORTIVO EL TUCO ALFARO", dirc: "Barrio Los Remedios, Zacatecoluca", tel: "7116-1129", desc: "Espacios adaptados para el resguardo (Capacidad: 50 personas)." }
+                { nombre: "IGLESIA ESPERANZA VIVA", dirc: "Barrio el centro, Santiago Nonualco", tel: "6135-5777", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 60 personas).", imagen:"/SAFEN/img/La Paz/IglesiaEvangelicaCentroamericanaEsperanzaViva.jpg.jpeg"},
+                { nombre: "CASA COMUNAL CANTÓN COMALAPA", dirc: "Canton Comalapa KM 32 1/2 carreteta antigua a Zacatecoluca", tel: "7270-2131", desc: "Resguardo temporal y espacios seguros (Capacidad: 80 personas).", imagen:"/SAFEN/img/La Paz/CasaComunalCantonComalapa.jpg.jpeg" },
+                { nombre: "ANFITEATRO LA HERRADURA", dirc: "Barrio San Luis, calle Principal", tel: "7065-3686", desc: "Áreas amplias y seguras para emergencias (Capacidad: 40 personas).", imagen:"/SAFEN/img/La Paz/AltiteatroLaHerradura.jpg.jpeg"},
+                { nombre: "CASA COMUNAL LAS ISLETAS", dirc: "Canton Las Isletas, San Pedro Masahuat", tel: "7592-4144", desc: "Protección y alojamiento temporal (Capacidad: 50 personas).", imagen:"/SAFEN/img/La Paz/CasaComunalLasIsletas.jpg.jpeg" },
+                { nombre: "ESCUELA DE DESARROLLO HUMANO", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Resguardo temporal y apoyo básico (Capacidad: 30 personas).", imagen:"/SAFEN/img/La Paz/EscuelaDeDesarrolloHumano.jpg.jpeg" },
+                { nombre: "POLIDEPORTIVO 27 DE SEPTIEMBRE", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Instalaciones amplias para desastres naturales (Capacidad: 60 personas).", imagen:"/SAFEN/img/La Paz/Polideportivo27DeSeptiembre.jpg.jpeg" },
+                { nombre: "CENTRO DEPORTIVO EL TUCO ALFARO", dirc: "Barrio Los Remedios, Zacatecoluca", tel: "7116-1129", desc: "Espacios adaptados para el resguardo (Capacidad: 50 personas).", imagen:"/SAFEN/img/La Paz/CentroDeportivoElTucoAlfaro.jpg.jpeg" }
             ],
             launion: [
                 { nombre: "CASA DE RETIRO EL MELONAL", dirc: "Conchagua | La Unión Sur", tel: "2680-3301", desc: "Instalaciones amplias para numerosas familias." },
