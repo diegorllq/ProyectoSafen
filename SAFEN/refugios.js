@@ -1,19 +1,19 @@
 const data = {
             ahuachapan: [
-                { nombre: "GIMNASIO LOS PINITOS", dirc: "Ahuachapán Centro | Ave morazan", tel: "7736-9467", desc: "Refugio temporal de amplia capacidad." },
-                { nombre: "CASA COMUNAL APANECA", dirc: "Ahuachapán Centro | Bo. El Centro", tel: "7380-4612", desc: "Resguardo para la comunidad de Apaneca." },
-                { nombre: "CASA COMUNAL ATACO", dirc: "Ahuachapán Centro | 3era calle Ote", tel: "7577-7205", desc: "Centro de resguardo en Ataco." },
-                { nombre: "CASA COMUNAL GUAYMANGO", dirc: "Ahuachapán Sur | Barrio el centro", tel: "6985-9635", desc: "Ubicado frente al centro educativo." },
-                { nombre: "CASA COMUNAL EL MANGO", dirc: "Jujutla | Ahuachapán Sur", tel: "7889-8708", desc: "Refugio del distrito municipal." },
-                { nombre: "NUEVO AMANECER", dirc: "San Francisco Menéndez | Ahuachapán Sur", tel: "7627-5788", desc: "Ubicado en la carretera litoral." },
-                { nombre: "CASA COMUNAL SAN PEDRO PUXTLA", dirc: "Ahuachapán Sur | Bo. San Pablo", tel: "7059-8000", desc: "Refugio frente a la alcaldía." },
-                { nombre: "PREDIO DEL MERCADO", dirc: "Tacuba | Ahuachapán Centro", tel: "7886-6785", desc: "Predio municipal en Tacuba." },
-                { nombre: "CASA COMUNAL VALLE LA PUERTA", dirc: "Tacuba | Ahuachapán Centro", tel: "7672-5256", desc: "Refugio en zona rural de Tacuba." }
+                { nombre: "GIMNASIO LOS PINITOS", dirc: "Ahuachapán Centro | Ave morazan", tel: "7736-9467", desc: "Refugio temporal de amplia capacidad.", imagen:"/SAFEN/img/Ahuachapán/cmunalataco.jpg"},
+                { nombre: "CASA COMUNAL APANECA", dirc: "Ahuachapán Centro | Bo. El Centro", tel: "7380-4612", desc: "Resguardo para la comunidad de Apaneca.", imagen:"/SAFEN/img/Ahuachapán/comunaljujutla.jpg"},
+                { nombre: "CASA COMUNAL ATACO", dirc: "Ahuachapán Centro | 3era calle Ote", tel: "7577-7205", desc: "Centro de resguardo en Ataco.", imagen:"/SAFEN/img/Ahuachapán/cmunalataco.jpg"},
+                { nombre: "CASA COMUNAL GUAYMANGO", dirc: "Ahuachapán Sur | Barrio el centro", tel: "6985-9635", desc: "Ubicado frente al centro educativo.", imagen:"SAFEN/img/Ahuachapán/comunalguaymango.jpg" },
+                { nombre: "CASA COMUNAL EL MANGO", dirc: "Jujutla | Ahuachapán Sur", tel: "7889-8708", desc: "Refugio del distrito municipal.", imagen:"/SAFEN/img/Ahuachapán/comunalelmango.jpg" },
+                { nombre: "NUEVO AMANECER", dirc: "San Francisco Menéndez | Ahuachapán Sur", tel: "7627-5788", desc: "Ubicado en la carretera litoral.", imagen:"/SAFEN/img/Ahuachapán/comunalnuevoamanecer.jpg}" },
+                { nombre: "CASA COMUNAL SAN PEDRO PUXTLA", dirc: "Ahuachapán Sur | Bo. San Pablo", tel: "7059-8000", desc: "Refugio frente a la alcaldía.", imagen:"/SAFEN/img/Ahuachapán/comunalsanpedropuxtla.jpg" },
+                { nombre: "PREDIO DEL MERCADO", dirc: "Tacuba | Ahuachapán Centro", tel: "7886-6785", desc: "Predio municipal en Tacuba.", imagen:"/SAFEN/img/Ahuachapán/mercadotacuba.jpg"},
+                { nombre: "CASA COMUNAL VALLE LA PUERTA", dirc: "Tacuba | Ahuachapán Centro", tel: "7672-5256", desc: "Refugio en zona rural de Tacuba.", imagen:"SAFEN/img/Ahuachapán/comunalVallelapuerta.jpg" }
             ],
             cabanas: [
-                { nombre: "LAS GOLONDRINAS ILOBASCO", dirc: "Lot. La Virgen Lote 13 Polígono C, Ilobasco, Cabañas Oeste", tel: "7592-2725", desc: "Ofrece alojamiento temporal y espacio seguro (Capacidad: 30 personas)." },
-                { nombre: "POLIDEPORTIVO DE SENSUNTEPEQUE", dirc: "Barrio los remedios, col. Las brisas, Sensuntepeque", tel: "7478-4982", desc: "Áreas amplias para familias evacuadas (Capacidad: 30 personas)." },
-                { nombre: "CASA COMUNAL VICTORIA", dirc: "Barrio el centro, distrito de Victoria, Cabañas Este", tel: "7478-4982", desc: "Protección y apoyo básico en situación de riesgo (Capacidad: 40 personas)." }
+                { nombre: "LAS GOLONDRINAS ILOBASCO", dirc: "Lot. La Virgen Lote 13 Polígono C, Ilobasco, Cabañas Oeste", tel: "7592-2725", desc: "Ofrece alojamiento temporal y espacio seguro (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cabañas/LasGolondrinasIlobasco.jpg" },
+                { nombre: "POLIDEPORTIVO DE SENSUNTEPEQUE", dirc: "Barrio los remedios, col. Las brisas, Sensuntepeque", tel: "7478-4982", desc: "Áreas amplias para familias evacuadas (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cabañas/PolidepVictoria.jpg.jpeg" },
+                { nombre: "CASA COMUNAL VICTORIA", dirc: "Barrio el centro, distrito de Victoria, Cabañas Este", tel: "7478-4982", desc: "Protección y apoyo básico en situación de riesgo (Capacidad: 40 personas).", imagen:"SAFEN/img/Cabañas/ComunalVictoria.jpg.jpeg" }
             ],
             chalatenango: [
                 { nombre: "CASA COMUNAL CITALÁ", dirc: "Calle Manuel José Arce frente a Parque Municipal", tel: "7482-3336", desc: "Alojamiento temporal y protección (Capacidad: 40 personas)." },
