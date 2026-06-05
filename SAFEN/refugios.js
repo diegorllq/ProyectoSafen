@@ -3,7 +3,7 @@ const data = {
                 { nombre: "GIMNASIO LOS PINITOS", dirc: "Ahuachapán Centro | Ave morazan", tel: "7736-9467", desc: "Refugio temporal de amplia capacidad.", imagen:"/SAFEN/img/Ahuachapán/cmunalataco.jpg"},
                 { nombre: "CASA COMUNAL APANECA", dirc: "Ahuachapán Centro | Bo. El Centro", tel: "7380-4612", desc: "Resguardo para la comunidad de Apaneca.", imagen:"/SAFEN/img/Ahuachapán/comunaljujutla.jpg"},
                 { nombre: "CASA COMUNAL ATACO", dirc: "Ahuachapán Centro | 3era calle Ote", tel: "7577-7205", desc: "Centro de resguardo en Ataco.", imagen:"/SAFEN/img/Ahuachapán/cmunalataco.jpg"},
-                { nombre: "CASA COMUNAL GUAYMANGO", dirc: "Ahuachapán Sur | Barrio el centro", tel: "6985-9635", desc: "Ubicado frente al centro educativo.", imagen:"SAFEN/img/Ahuachapán/comunalguaymango.jpg" },
+                { nombre: "CASA COMUNAL GUAYMANGO", dirc: "Ahuachapán Sur | Barrio el centro", tel: "6985-9635", desc: "Ubicado frente al centro educativo.", imagen:"/SAFEN/img/Ahuachapán/comunalguaymango.jpg" },
                 { nombre: "CASA COMUNAL EL MANGO", dirc: "Jujutla | Ahuachapán Sur", tel: "7889-8708", desc: "Refugio del distrito municipal.", imagen:"/SAFEN/img/Ahuachapán/comunalelmango.jpg" },
                 { nombre: "NUEVO AMANECER", dirc: "San Francisco Menéndez | Ahuachapán Sur", tel: "7627-5788", desc: "Ubicado en la carretera litoral.", imagen:"/SAFEN/img/Ahuachapán/comunalnuevoamanecer.jpg" },
                 { nombre: "CASA COMUNAL SAN PEDRO PUXTLA", dirc: "Ahuachapán Sur | Bo. San Pablo", tel: "7059-8000", desc: "Refugio frente a la alcaldía.", imagen:"/SAFEN/img/Ahuachapán/comunalsanpedropuxtla.jpg" },
@@ -13,13 +13,13 @@ const data = {
             cabanas: [
                 { nombre: "LAS GOLONDRINAS ILOBASCO", dirc: "Lot. La Virgen Lote 13 Polígono C, Ilobasco, Cabañas Oeste", tel: "7592-2725", desc: "Ofrece alojamiento temporal y espacio seguro (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cabañas/LasGolondrinasIlobasco.jpg" },
                 { nombre: "POLIDEPORTIVO DE SENSUNTEPEQUE", dirc: "Barrio los remedios, col. Las brisas, Sensuntepeque", tel: "7478-4982", desc: "Áreas amplias para familias evacuadas (Capacidad: 30 personas).", imagen:"/SAFEN/img/Cabañas/PolidepVictoria.jpg.jpeg" },
-                { nombre: "CASA COMUNAL VICTORIA", dirc: "Barrio el centro, distrito de Victoria, Cabañas Este", tel: "7478-4982", desc: "Protección y apoyo básico en situación de riesgo (Capacidad: 40 personas).", imagen:"SAFEN/img/Cabañas/ComunalVictoria.jpg.jpeg" }
+                { nombre: "CASA COMUNAL VICTORIA", dirc: "Barrio el centro, distrito de Victoria, Cabañas Este", tel: "7478-4982", desc: "Protección y apoyo básico en situación de riesgo (Capacidad: 40 personas).", imagen:"/SAFEN/img/Cabañas/ComunalVictoria.jpg.jpeg" }
             ],
             chalatenango: [
-                { nombre: "CASA COMUNAL CITALÁ", dirc: "Calle Manuel José Arce frente a Parque Municipal", tel: "7482-3336", desc: "Alojamiento temporal y protección (Capacidad: 40 personas)." },
-                { nombre: "S.U.M. JARDINES DEL PARAÍSO", dirc: "Calle Principal Barrio San Luis, El Paraíso", tel: "7813-4492", desc: "Espacio seguro y resguardo temporal (Capacidad: 50 personas)." },
-                { nombre: "COMPLEJO CRISTIANO LA PALMA", dirc: "Barrio La Tejera, La Palma", tel: "6456-5226", desc: "Apoyo básico y alojamiento temporal (Capacidad: 40 personas)." },
-                { nombre: "CENTRO OBRERO DR. MARIO ZAMORA", dirc: "Caserio el refugio canton el gramal", tel: "7686-0344", desc: "Espacios amplios para atender familias (Capacidad: 70 personas)." }
+                { nombre: "CASA COMUNAL CITALÁ", dirc: "Calle Manuel José Arce frente a Parque Municipal", tel: "7482-3336", desc: "Alojamiento temporal y protección (Capacidad: 40 personas).", imagen:"/SAFEN/img/Chalatenango/CasaComunalCitala.jpg.jpeg" },
+                { nombre: "S.U.M. JARDINES DEL PARAÍSO", dirc: "Calle Principal Barrio San Luis, El Paraíso", tel: "7813-4492", desc: "Espacio seguro y resguardo temporal (Capacidad: 50 personas).",imagen:"/SAFEN/img/Chalatenango/SalonUsosMultipesJardinesDelParaiso.jpg.jpeg" },
+                { nombre: "COMPLEJO CRISTIANO LA PALMA", dirc: "Barrio La Tejera, La Palma", tel: "6456-5226", desc: "Apoyo básico y alojamiento temporal (Capacidad: 40 personas).", imagen:"/SAFEN/img/Chalatenango/ComplejoCristianoLaPalma.jpg.jpeg" },
+                { nombre: "CENTRO OBRERO DR. MARIO ZAMORA", dirc: "Caserio el refugio canton el gramal", tel: "7686-0344", desc: "Espacios amplios para atender familias (Capacidad: 70 personas).", imagen:"/SAFEN/img/Chalatenango/CentroObreroDoctorMarioZamora.jpg.jpeg"}
             ],
             cuscatlan: [
                 { nombre: "ACOSAMA", dirc: "Calle principal de San Pedro Perulapán", tel: "7364-9543", desc: "Alojamiento temporal y espacios seguros (Capacidad: 90 personas)." },
