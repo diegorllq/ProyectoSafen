@@ -161,3 +161,91 @@ header{
    color: #333;
 }
 
+
+/*  Responsive */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 45px;
+  }
+
+  .hero-text span {
+    font-size: 45px;
+  }
+
+  .imagenes img {
+    width: 130px;
+    height: 190px;
+  }
+}
+
+/*  CELULARES */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero-text {
+    top: 80px;
+    left: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    max-width: 90%;
+  }
+
+  .hero-text span {
+    font-size: 28px;
+  }
+
+  .donacion-info {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .donacion-left,
+  .donacion-right {
+    width: 100%;
+  }
+
+  .titulo {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /*  Imagenes */
+  .imagenes {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .imagenes img {
+    width: 80%;
+    height: auto;
+  }
+
+  .donacion-right p {
+    margin-top: 20px;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .donacion-left h2 {
+    font-size: 18px;
+  }
+
+  .btn-donar {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

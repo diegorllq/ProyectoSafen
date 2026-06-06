@@ -38,15 +38,15 @@
             </div>
             <div class="cards-grid">
                 <div class="card">
-                    <div class="image-box" style="background-image: url('/SAFEN\img\San Salvador\CentroComunitarioMonseñorRomero.jpg.jpeg');"></div>
+                    <div class="image-box" style="background-image: url('/SAFEN/img/San Salvador/CentroComunitarioMonseñorRomero.jpg.jpeg');"></div>
                     <div class="card-caption"><h3>Albergue Misericordia</h3></div>
                 </div>
                 <div class="card">
-                    <div class="image-box" style="background-image: url('/SAFEN\img\Santa Ana\CasaComunalS.APajonal.jpg');"></div>
+                    <div class="image-box" style="background-image: url('/SAFEN/img/Santa Ana/CasaComunalS.APajonal.jpg');"></div>
                     <div class="card-caption"><h3>Albergue Divina Misericordia</h3></div>
                 </div>
                 <div class="card">
-                    <div class="image-box" style="background-image: url('/SAFEN\img\La Unión\CentroDeDesarrolloMeanguer.JPG');"></div>
+                    <div class="image-box" style="background-image: url('/SAFEN/img/La Unión/CentroDeDesarrolloMeanguer.JPG');"></div>
                     <div class="card-caption"><h3>Albergue Katia Miranda</h3></div>
                 </div>
             </div>

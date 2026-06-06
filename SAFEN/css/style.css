@@ -161,3 +161,93 @@ margin-top: 70px;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
 }
+/* 📱 RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .left h1 {
+    font-size: 45px;
+  }
+
+  .safen {
+    font-size: 45px;
+  }
+
+  .right p {
+    font-size: 20px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+}
+
+/*  CELULARES */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 300px;
+  }
+
+  .waves {
+    height: 120px;
+  }
+
+  .info {
+    flex-direction: column; 
+    padding: 20px;
+  }
+
+  .left, .right {
+    width: 100%; 
+  }
+
+  .left h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .safen {
+    font-size: 32px;
+  }
+
+  .right p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .left button {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .bienvenida {
+    margin-top: 0;
+  }
+
+  .about {
+    padding: 50px 20px;
+  }
+
+  .about h2 {
+    font-size: 32px;
+  }
+
+  /* CARDS en columna */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 50px 20px 30px;
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+}
