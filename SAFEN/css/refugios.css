@@ -42,6 +42,10 @@ body {
     margin-top: 20px;
 }
 
+.title-text{
+color: #363a73;
+}
+
 h1 {
     font-family: 'Poppins', sans-serif;
     color: #363a73;
