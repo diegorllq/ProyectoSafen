@@ -43,13 +43,14 @@ body {
 }
 
 h1 {
+    font-family: 'Poppins', sans-serif;
     color: #363a73;
     font-size: 2.5rem;
     line-height: 1.1;
 }
 
 h1 span {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Satisfy', cursive;
     font-weight: normal;
     font-size: 3rem;
 }
