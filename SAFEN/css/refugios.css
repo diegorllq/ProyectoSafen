@@ -34,7 +34,6 @@ body {
     padding: 0 5%;
 }
 
-/* HEADER: Muy cerca de las imágenes[cite: 1, 2] */
 .header {
     display: flex;
     justify-content: space-between;
@@ -69,7 +68,7 @@ p {
     cursor: pointer;
 }
 
-/* SECCIÓN DE LA OLA (INFINITA HACIA LOS LADOS)[cite: 1, 2] */
+
 .shelter-section {
     position: relative;
     margin-top: 15px;
@@ -81,7 +80,7 @@ p {
     bottom: 0;
     left: -10vw;
     width: 120vw;
-    height: 480px; /* Suficientemente alta para envolver las letras[cite: 2] */
+    height: 480px; 
     z-index: 1;
 }
 
@@ -90,7 +89,7 @@ p {
     height: 100%;
 }
 
-/* GRID DE TARJETAS */
+
 .cards-grid {
     position: relative;
     z-index: 2;
@@ -105,7 +104,7 @@ p {
     text-align: center;
 }
 
-/* IMÁGENES: Tamaño vertical de la foto[cite: 2] */
+/* IMÁGENES */
 .image-box {
     width: 100%;
     height: 420px;
@@ -116,7 +115,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* TEXTO: Blanco sobre el azul de la ola[cite: 2] */
+ 
 .card-caption h3 {
     color: white;
     font-size: 1.25rem;
@@ -234,20 +233,120 @@ nav{
     justify-content: space-around !important;
     gap: 0 !important;
 }
-/* Estilos para que la imagen se acomode perfectamente en la parte superior dentro del modal */
+
 .shelter-modal-image {
     width: 100%;
-    height: 220px; /* Controla el alto de la fotografía en pantallas grandes */
+    height: 220px; 
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    margin-bottom: 20px; /* Espaciado inferior para separar la foto del texto */
+    margin-bottom: 20px; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Ajuste responsivo opcional para que en móviles la imagen no ocupe tanto espacio vertical */
 @media (max-width: 800px) {
     .shelter-modal-image {
         height: 160px;
+    }
+}
+
+/*  responsive */
+@media (max-width: 1024px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+
+    .image-box {
+        height: 300px;
+    }
+
+    .locations-grid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 5%;
+    }
+}
+
+/*  Celular */
+@media (max-width: 768px) {
+
+    body {
+        margin-top: 80px;
+    }
+
+    .nav-icons-wrapper {
+        font-size: 1.2rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h1 span {
+        font-size: 2rem;
+    }
+
+    .btn-filter {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .image-box {
+        height: 250px;
+    }
+
+    .wave-bg {
+        height: 600px;
+    }
+
+    .locations-grid {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .shelters-scroll-container {
+        max-height: 60vh;
+        padding: 15px;
+    }
+
+    .info-row {
+        padding-left: 30px;
+    }
+
+    .blue-icon {
+        font-size: 1.2rem;
+    }
+
+    .shelter-modal-image {
+        height: 150px;
     }
 }

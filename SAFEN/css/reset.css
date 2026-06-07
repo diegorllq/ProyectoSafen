@@ -23,7 +23,7 @@ body {
 }
 
 .back-btn:hover {
-    background: #e91e63;
+    background: #363a73;
     color: #fff;
     transform: scale(1.1);
 }
@@ -47,7 +47,7 @@ body {
 
 
 .reset-container h2 {
-    color: #e91e63;
+    color: #363a73;
     font-size: 28px;
 }
 
@@ -76,14 +76,14 @@ body {
 }
 
 .reset-container input:focus {
-    border-color: #e91e63;
+    border-color: #363a73;
 }
 
 
 .reset-container button {
     display: block;
     margin: 20px auto 0;
-    background: linear-gradient(135deg, #e91e63, #ff4d88);
+    background: linear-gradient(135deg, #363a73, #363a73);
     border: none;
     padding: 12px 25px;
     color: #fff;
@@ -94,4 +94,67 @@ body {
 
 .reset-container button:hover {
     transform: scale(1.05);
+}
+
+/*  Responsive */
+
+@media (max-width: 1024px) {
+
+    .reset-container {
+        width: 80%;
+        margin: 60px auto;
+        padding: 30px;
+    }
+
+    .reset-container h2 {
+        font-size: 24px;
+    }
+
+    .reset-container p {
+        font-size: 13px;
+    }
+}
+
+/*  Celular */
+@media (max-width: 768px) {
+
+    .back-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .reset-container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .reset-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .reset-container h2 {
+        font-size: 20px;
+    }
+
+    .reset-container p {
+        font-size: 12px;
+    }
+
+    .reset-container input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .reset-container button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
 }

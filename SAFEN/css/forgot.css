@@ -21,7 +21,7 @@ body{
 }
 
 .back-btn:hover {
-    background: #e91e63;
+    background: #363a73;
     color: #fff;
     transform: scale(1.1);
 }
@@ -58,7 +58,7 @@ body{
 
 }
 .forgot-container input:focus {
-    border-color: #e91e63;
+    border-color: #363a73;
 }
 .forgot-container button {
     background: linear-gradient(135deg, #363a73, #131b58);
@@ -79,7 +79,7 @@ body{
     padding: 15px;
     border-radius: 12px;
     background: #f9f9f9;
-    border-left: 4px solid #e91e63;
+    border-left: 4px solid #363a73;
     animation: fadeIn 0.4s ease;
 }
 
@@ -115,4 +115,67 @@ body{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*  Responsive */
+
+@media (max-width: 992px) {
+  .forgot-container {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .forgot-container h2 {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .forgot-container {
+    width: 90%; 
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .forgot-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .forgot-container p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .forgot-container input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .forgot-container button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .link-box {
+    padding: 12px;
+  }
+
+  .link a {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* botón volver */
+  .back-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    top: 15px;
+    left: 15px;
+  }
 }

@@ -23,7 +23,7 @@ header{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 180px; /* más alto */
+    height: 180px; 
     z-index: 2;
   }
 
@@ -39,7 +39,7 @@ header{
   width: 100%;
   height: 100%;
 
-  background: rgba(0, 0, 0, 0.35); /* controla la oscuridad */
+  background: rgba(0, 0, 0, 0.35); 
   z-index: 1;
 }
  
@@ -161,9 +161,10 @@ margin-top: 70px;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
 }
-/* 📱 RESPONSIVE */
 
-/* Tablets */
+/* RESPONSIVE */
+
+
 @media (max-width: 992px) {
   .left h1 {
     font-size: 45px;
@@ -233,7 +234,7 @@ margin-top: 70px;
     font-size: 32px;
   }
 
-  /* CARDS en columna */
+  /* CARDS */
   .cards {
     flex-direction: column;
     align-items: center;

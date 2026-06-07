@@ -155,3 +155,115 @@ body{
 .container.toggle .welcome-sign-up{
     transform: translateX(-100%);
 }
+
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container-welcome {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        transform: translateX(0);
+        border-radius: 0;
+    }
+
+    .container.toggle .container-welcome {
+        border-radius: 0;
+    }
+
+    .container-welcome .welcome {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container-form form {
+        padding: 20px;
+    }
+
+    .container-form h2 {
+        font-size: 30px;
+    }
+}
+
+/*  CELULAR  */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .container-form {
+        width: 100%;
+    }
+
+    .container-form form {
+        padding: 20px;
+    }
+
+    .container-form h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .container-input {
+        width: 100%;
+    }
+
+    .container-input input {
+        width: 100%;
+    }
+
+    .container-form a {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .buttom {
+        width: 100%;
+    }
+
+    .container-welcome {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        position: relative;
+        transform: translateX(0);
+        border-radius: 0;
+    }
+
+    .container-welcome h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .container-welcome .welcome {
+        padding: 10px;
+    }
+
+    
+    .sign-up,
+    .container.toggle .sign-in,
+    .container.toggle .sign-up {
+        transform: none;
+    }
+
+    .welcome-sign-in,
+    .container.toggle .welcome-sign-in,
+    .container.toggle .welcome-sign-up {
+        transform: none;
+    }
+}

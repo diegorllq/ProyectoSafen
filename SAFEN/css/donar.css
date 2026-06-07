@@ -22,7 +22,7 @@ body{
 }
 
 .back-btn:hover {
-    background: #e91e63;
+    background: #363a73;
     color: #fff;
     transform: scale(1.1);
 }
@@ -81,7 +81,7 @@ body{
 
 .donar-left input:focus,
 .donar-left select:focus{
-  border-bottom:2px solid #e91e63;
+  border-bottom:2px solid #363a73;
 }
 
 
@@ -163,7 +163,7 @@ body{
 
 
 .metodo:hover{
-  border-color:#e91e63;
+  border-color: #363a73;
   transform:scale(1.05);
 }
 
@@ -185,3 +185,91 @@ body{
   background:#fff0f5;
 }
 
+/*  Responsive */
+
+
+@media (max-width: 992px) {
+
+  .donar-left h1 {
+    font-size: 28px;
+  }
+
+  .donar-right h2 {
+    font-size: 24px;
+  }
+
+  .donar-left form {
+    width: 90%;
+  }
+
+}
+
+/*  CELULARES */
+@media (max-width: 768px) {
+
+  .donar-container {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .donar-left,
+  .donar-right {
+    width: 100%;
+  }
+
+  .donar-left {
+    padding: 30px 20px;
+  }
+
+  .donar-left form {
+    width: 100%;
+  }
+
+  .donar-left h1 {
+    font-size: 24px;
+  }
+
+  .donar-left input,
+  .donar-left select {
+    font-size: 14px;
+  }
+
+  .donar-left button {
+    font-size: 14px;
+  }
+
+  .donar-right {
+    padding: 30px 20px;
+  }
+
+  .donar-right h2 {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .donar-right span {
+    font-size: 26px;
+  }
+
+  
+  .metodos {
+    flex-direction: column;
+  }
+
+  .metodo {
+    width: 100%;
+  }
+
+  .metodo img {
+    width: 40px;
+  }
+
+  .back-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    top: 15px;
+    left: 15px;
+  }
+
+}
