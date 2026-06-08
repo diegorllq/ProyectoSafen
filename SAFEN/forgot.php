@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
 
-$link = null; // importante
+$link = null;
 
 if (isset($_POST["enviar"])) {
 
@@ -15,10 +15,19 @@ if (isset($_POST["enviar"])) {
 
   if ($stmt->execute()) {
 
-    //  link guardado
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-$link = $protocol . $_SERVER['HTTP_HOST'] . "/reset.php?token=" . $token;
 
+    // Deteccion para subir
+    if ($_SERVER['HTTP_HOST'] == 'localhost') {
+        $rutaBase = "/SAFEN";
+    } else {
+        $rutaBase = "";
+    }
+
+    $link = $protocol . $_SERVER['HTTP_HOST'] . $rutaBase . "/reset.php?token=" . $token;
+
+  } else {
+    echo "Error al generar enlace";
   }
 }
 ?>
