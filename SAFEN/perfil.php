@@ -15,7 +15,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 
 $mensaje = "";
 
-// GUARDAR CAMBIOS
+// Guardar
 if (isset($_POST["guardar"])) {
 
     $nuevoNombre = $_POST["nombre"];
@@ -31,46 +31,42 @@ if (isset($_POST["guardar"])) {
 
     $updatePassword = "";
 
-    // CAMBIO DE CONTRASEÑA
+    // 🔐 CAMBIO DE CONTRASEÑA
     if (!empty($actual) || !empty($nueva) || !empty($confirmar)) {
 
         if (!password_verify($actual, $usuario["password"])) {
-            $mensaje = "❌ Contraseña actual incorrecta";
+            $mensaje = "error|Contraseña actual incorrecta";
         } else if ($nueva !== $confirmar) {
-            $mensaje = "❌ Las contraseñas no coinciden";
+            $mensaje = "error|Las contraseñas no coinciden";
         } else {
             $passwordHash = password_hash($nueva, PASSWORD_DEFAULT);
             $updatePassword = ", password='$passwordHash'";
         }
     }
 
-    // QUERY BASE
+    // Query
     $sql = "UPDATE usuarios 
             SET nombre='$nuevoNombre',
                 correo='$nuevoCorreo',
                 telefono='$telefono'
                 $updatePassword";
 
-    // FOTO
+    // Foto
     if (!empty($fotoNombre)) {
         $fotoFinal = time() . "_" . $fotoNombre;
         move_uploaded_file($rutaTemporal, "img/" . $fotoFinal);
-
         $sql .= ", foto='$fotoFinal'";
     }
 
     $sql .= " WHERE nombre='$nombre'";
 
-    if (empty($mensaje)) {
-        if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($conn, $sql)) {
 
-            $_SESSION["usuario"] = $nuevoNombre;
+        $_SESSION["usuario"] = $nuevoNombre;
+        $mensaje = "success|Cambios guardados correctamente";
 
-            $mensaje = "✅ Datos actualizados correctamente";
-
-        } else {
-            $mensaje = "❌ Error al actualizar";
-        }
+    } else {
+        $mensaje = "error|Error al actualizar";
     }
 }
 ?>
@@ -78,14 +74,14 @@ if (isset($_POST["guardar"])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil</title>
 
-    <link rel="stylesheet" href="css/perfil.css">
-    <link rel="stylesheet" href="css/alertas.css">
+<link rel="stylesheet" href="css/perfil.css">
+<link rel="stylesheet" href="css/alertas.css">
+
 </head>
-
 <body>
 
 <div id="alerta" class="alerta"></div>
@@ -96,7 +92,6 @@ if (isset($_POST["guardar"])) {
 
 <div class="perfil-container">
 
-    <!-- IZQUIERDA -->
     <div class="left">
         <?php if ($usuario["foto"]) { ?>
             <img src="img/<?php echo $usuario["foto"]; ?>" class="foto">
@@ -108,11 +103,10 @@ if (isset($_POST["guardar"])) {
         <p><?php echo $usuario["correo"]; ?></p>
     </div>
 
-    <!-- DERECHA -->
     <div class="right">
         <h1>Ajustes</h1>
 
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data" id="formPerfil">
 
             <label>Nombre</label>
             <input type="text" name="nombre" value="<?php echo $usuario["nombre"]; ?>">
@@ -126,7 +120,6 @@ if (isset($_POST["guardar"])) {
             <label>Foto de perfil</label>
             <input type="file" name="foto">
 
-            <!-- CAMBIAR CONTRASEÑA -->
             <button type="button" id="btn-password" class="btn-guardar">
                 Cambiar contraseña
             </button>
@@ -161,10 +154,40 @@ if (isset($_POST["guardar"])) {
 <script src="contrasena.js"></script>
 <script src="alert.js"></script>
 
-<?php if (!empty($mensaje)) { ?>
 <script>
-    mostrarAlerta("<?php echo $mensaje; ?>");
+// Alerta desde php
+<?php if (!empty($mensaje)): ?>
+    const [tipo, texto] = "<?php echo $mensaje; ?>".split("|");
+    showAlert(texto, tipo);
+<?php endif; ?>
+
+// 🚨 DETECTAR CAMBIOS (para salir sin guardar)
+let form = document.getElementById("formPerfil");
+let cambios = false;
+
+form.addEventListener("input", () => {
+    cambios = true;
+});
+
+// volver
+document.getElementById("btn-volver").onclick = () => {
+    if (cambios) {
+        if (confirm("Tienes cambios sin guardar ¿Salir igual?")) {
+            window.history.back();
+        }
+    } else {
+        window.history.back();
+    }
+};
+
+// Si cierra pestaña
+window.addEventListener("beforeunload", function (e) {
+    if (cambios) {
+        e.preventDefault();
+        e.returnValue = '';
+    }
+});
 </script>
-<?php } ?>
 
 </body>
+</html>

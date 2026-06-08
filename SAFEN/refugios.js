@@ -126,7 +126,7 @@ const data = {
                 { nombre: "C.E. EL CONGO", dirc: "El Congo | S.A. Este", tel: "2484-7500", desc: "Aulas amplias para refugio.", imagen:"img/SantaAna/CasaComunalMetapan.webp" },
                 { nombre: "CASA COMUNAL MASAHUAT", dirc: "Masahuat | S.A. Oeste", tel: "2484-7500", desc: "Áreas de descanso para afectados.", imagen:"img/SantaAna/CasaComunalDeMasahuat.JPG" },
                 { nombre: "INSTITUTO NACIONAL METAPÁN", dirc: "Metapán | S.A. Norte", tel: "2484-7500", desc: "Alimentación y atención humanitaria.", imagen:"img/SantaAna/InstitutoNacionalSantaAna.jpg" },
-                { nombre: "CASA COMUNAL S.A. PAJONAL", dirc: "S.A. Pajonal | S.A. Norte", tel: "2484-7500", desc: "Protección y asistencia inmediata.", imagen:"img/SantaAna/CasaComunalS.APajonal.jpg" },
+                { nombre: "CASA COMUNAL S.A. PAJONAL", dirc: "S.A. Pajonal | S.A. Norte", tel: "2484-7500", desc: "Protección y asistencia inmediata.", imagen:"img/SantaAna/CasaComunalSAPajonal.jpg" },
                 { nombre: "CASA COMUNAL S.S. SALITRILLO", dirc: "S.S. Salitrillo | S.A. Oeste", tel: "2484-7500", desc: "Apoyo comunitario organizado.", imagen:"img/SantaAna/CentroComunitarioDeSanEstebanSalitrillo.webp" },
                 { nombre: "INSTITUTO NACIONAL SANTA ANA", dirc: "Santa Ana | Centro", tel: "2441-0000", desc: "Refugio principal de gran capacidad.", imagen:"img/SantaAna/InstitutoNacionalSantaAna.jpg" }
             ],
