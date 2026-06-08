@@ -31,7 +31,7 @@ if (isset($_POST["guardar"])) {
 
     $updatePassword = "";
 
-    // 🔐 CAMBIO DE CONTRASEÑA
+    //  CAMBIO DE CONTRASEÑA
     if (!empty($actual) || !empty($nueva) || !empty($confirmar)) {
 
         if (!password_verify($actual, $usuario["password"])) {
@@ -161,7 +161,7 @@ if (isset($_POST["guardar"])) {
     showAlert(texto, tipo);
 <?php endif; ?>
 
-// 🚨 DETECTAR CAMBIOS (para salir sin guardar)
+//  detectar cambios
 let form = document.getElementById("formPerfil");
 let cambios = false;
 
