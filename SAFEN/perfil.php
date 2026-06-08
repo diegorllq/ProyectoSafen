@@ -86,7 +86,7 @@ if (isset($_POST["guardar"])) {
 
 <div id="alerta" class="alerta"></div>
 
-<button id="btn-volver" class="btn-back">
+<button id="btn-volver" type="button" class="btn-back">
     &#8592;
 </button>
 
