@@ -99,7 +99,7 @@ if (isset($_POST["guardar"])) {
     <!-- IZQUIERDA -->
     <div class="left">
         <?php if ($usuario["foto"]) { ?>
-            <img src="img/"<?php echo $usuario["foto"]; ?>" class="foto">
+            <img src="img/<?php echo $usuario["foto"]; ?>" class="foto">
         <?php } else { ?>
             <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($usuario['nombre']); ?>&background=15173d&color=fff" class="foto">
         <?php } ?>

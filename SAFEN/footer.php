@@ -12,10 +12,10 @@
             <h4>Navegación</h4>
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="ajustes.php">Ajustes</a></li>
+                <li><a href="perfil.php">Ajustes</a></li>
                 <li><a href="mapas.php">Mapas</a></li>
                 <li><a href="refugios.php">Refugios</a></li>
-                <li><a href="voluntarios.php">Voluntariados</a></li>
+                <li><a href="voluntariados.php">Voluntariados</a></li>
                 <li><a href="donaciones.php">Donaciones</a></li>
             </ul>
         </div>

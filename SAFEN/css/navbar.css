@@ -32,9 +32,7 @@
      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
      z-index: 3;
   }
-  nav a.active svg {
-  color: #00d4ff;
-} 
+  
 @media (max-width: 600px) {
   nav {
     width: 95%;
