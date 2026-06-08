@@ -54,8 +54,8 @@ if (isset($_POST["donar"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donar</title>
-<link rel="stylesheet" href="/SAFEN/css/alertas.css">
-<link rel="stylesheet" href="/SAFEN/css/donar.css">
+<link rel="stylesheet" href="css/alertas.css">
+<link rel="stylesheet" href="css/donar.css">
 
 </head>
 
@@ -82,19 +82,19 @@ placeholder="Ingrese un monto mayor o igual a $1.00" required>
 
    <label class="metodo">
     <input type="radio" name="metodo" value="tarjeta" required>
-    <img src="/SAFEN/img/tarjeta-credito.jpg" alt="Tarjeta">
+    <img src="img/tarjeta-credito.jpg" alt="Tarjeta">
     <span>Tarjeta</span>
   </label>
 
   <label class="metodo">
     <input type="radio" name="metodo" value="paypal">
-    <img src="/SAFEN/img/paypal.jpg" alt="Paypal">
+    <img src="img/paypal.jpg" alt="Paypal">
     <span>PayPal</span>
   </label>
 
   <label class="metodo">
     <input type="radio" name="metodo" value="efectivo">
-    <img src="/SAFEN/img/efectivo.jpg" alt="Efectivo">
+    <img src="img/efectivo.jpg" alt="Efectivo">
     <span>Efectivo</span>
   </label>
 
@@ -118,7 +118,7 @@ placeholder="Ingrese un monto mayor o igual a $1.00" required>
 
  </main>
 
- <script src="/SAFEN/alert.js"></script>
+ <script src="alert.js"></script>
 
 <?php if ($mensaje != "") { ?>
 <script>

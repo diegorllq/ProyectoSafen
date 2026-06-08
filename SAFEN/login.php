@@ -85,8 +85,8 @@ if (isset($_POST["login"])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 
-<link rel="stylesheet" href="/SAFEN/css/stylelog.css">
-<link rel="stylesheet" href="/SAFEN/css/alertas.css">
+<link rel="stylesheet" href="css/stylelog.css">
+<link rel="stylesheet" href="css/alertas.css">
 
 </head>
 <body>
@@ -154,8 +154,8 @@ if (isset($_POST["login"])) {
 
 </div>
 
-<script src="/SAFEN/script.js"></script>
-<script src="/SAFEN/alert.js"></script>
+<script src="script.js"></script>
+<script src="alert.js"></script>
 
 <!-- ALERTAS -->
 <?php if ($mensaje != "") { ?>

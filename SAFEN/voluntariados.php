@@ -9,9 +9,9 @@
     <title>Instituciones Humanitarias</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/SAFEN/css/voluntariado.css">
-    <link rel="stylesheet" href="/SAFEN/css/navbar.css">
-    <link rel="stylesheet" href="/SAFEN/css/footer.css">
+    <link rel="stylesheet" href="css/voluntariado.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Cruz-roja.jpeg" alt="Cruz Roja">
+                            <img src="img/Cruz-roja.jpeg" alt="Cruz Roja">
 
                         </a>
 
@@ -120,7 +120,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Cruz-verde.jpeg" alt="Cruz Verde">
+                            <img src="img/Cruz-verde.jpeg" alt="Cruz Verde">
 
                         </a>
 
@@ -158,7 +158,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Comando.jpeg" alt="Comandos">
+                            <img src="img/Comando.jpeg" alt="Comandos">
 
                         </a>
 
@@ -196,7 +196,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Bomberos.jpeg" alt="Bomberos">
+                            <img src="img/Bomberos.jpeg" alt="Bomberos">
 
                         </a>
 
@@ -234,7 +234,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Proteccion.jpeg" alt="Protección Civil">
+                            <img src="img/Proteccion.jpeg" alt="Protección Civil">
 
                         </a>
 
@@ -272,7 +272,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Techo.jpeg" alt="TECHO">
+                            <img src="img/Techo.jpeg" alt="TECHO">
 
                         </a>
 
@@ -310,7 +310,7 @@
                             class="image-wrapper"
                         >
 
-                            <img src="/SAFEN/img/Habitat.jpeg" alt="Hábitat">
+                            <img src="img/Habitat.jpeg" alt="Hábitat">
 
                         </a>
 
@@ -353,7 +353,7 @@
     </main>
 
     <!-- JAVASCRIPT -->
-    <script src="/SAFEN/movilidad.js"></script>
+    <script src="movilidad.js"></script>
 
    <?php include("footer.php"); ?>
 

@@ -16,7 +16,8 @@ if (isset($_POST["enviar"])) {
   if ($stmt->execute()) {
 
     //  link guardado
-    $link = "http://localhost/SAFEN/reset.php?token=" . $token;
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+$link = $protocol . $_SERVER['HTTP_HOST'] . "/reset.php?token=" . $token;
 
   }
 }
@@ -28,8 +29,8 @@ if (isset($_POST["enviar"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar contraseña</title>
-    <link rel="stylesheet" href="/SAFEN/css/alertas.css">
-   <link rel="stylesheet" href="/SAFEN/css/forgot.css">
+    <link rel="stylesheet" href="css/alertas.css">
+    <link rel="stylesheet" href="css/forgot.css">
 </head>
 <body>
  <div id="alerta" class="alerta"></div>
@@ -69,6 +70,6 @@ if (isset($_POST["enviar"])) {
 
 </main>
 
-<script src="/SAFEN/alert.js"></script>
+<script src="alert.js"></script>
 </body>
 </html>

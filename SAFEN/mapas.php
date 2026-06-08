@@ -2,7 +2,7 @@
 session_start();
 include("conexion.php");
 
-// 🔒 VALIDAR SESIÓN
+//  VALIDAR SESIÓN
 if (!isset($_SESSION["id"])) {
   header("Location: login.php");
   exit();
@@ -23,8 +23,8 @@ if (!isset($_SESSION["id"])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/SAFEN/css/mapa.css">
-    <link rel="stylesheet" href="/SAFEN/css/navbar.css">
+    <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
 </head>
 
@@ -77,6 +77,6 @@ if (!isset($_SESSION["id"])) {
     
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-    <script src="/SAFEN/mapas.js"></script>
+    <script src="mapas.js"></script>
 </body>
 </html>

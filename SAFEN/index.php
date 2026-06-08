@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAFEN</title>
-    <link rel="stylesheet" href="/SAFEN/css/style.css">
-    <link rel="stylesheet" href="/SAFEN/css/navbar.css">
-    <link rel="stylesheet" href="/SAFEN/css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
    
 <?php include("navbar.php"); ?>
 <div class="hero">
-  <img src="/SAFEN/img/image (1).png" alt="imagen">
+  <img src="img/image (1).png" alt="imagen">
 
   <!-- Curvas más altas pero rectas -->
   <svg class="waves" viewBox="0 0 1440 180" preserveAspectRatio="none">
@@ -79,7 +79,7 @@
 <div class="cards">
 
   <div class="card">
-    <img src="/SAFEN/img/img-mision.jpg" alt="Misión">
+    <img src="img/img-mision.jpg" alt="Misión">
     <h3>Misión</h3>
     <p>
       Conectar a las personas afectadas por desastres naturales en El Salvador con profesionales y voluntarios comprometidos con ayudar, activando una respuesta ágil, organizada y efectiva que genere un impacto real en momentos de emergencia.
@@ -87,7 +87,7 @@
   </div>
 
   <div class="card">
-    <img src="/SAFEN/img/img-vision.png" alt="Visión">
+    <img src="img/img-vision.png" alt="Visión">
     <h3>Visión</h3>
     <p>
       Ser la plataforma líder en gestión de emergencias en El Salvador, construyendo un país más preparado, seguro y unido, donde comunidades e instituciones tengan acceso a soluciones tecnológicas, innovadoras, accesibles y confiables que permitan actuar con rapidez y proteger vidas en los momentos más críticos.
@@ -95,7 +95,7 @@
   </div>
 
   <div class="card">
-    <img src="/SAFEN/img/image-propo.png" alt="Propósito">
+    <img src="img/image-propo.png" alt="Propósito">
     <h3>Propósito</h3>
     <p>
       Mejorar la respuesta ante desastres naturales en El Salvador, conectando a las personas afectadas con quienes pueden ayudarlas en el momento en que más lo necesitan. SAFEN nace para proteger vidas, reducir la incertidumbre y acompañar a las comunidades en situaciones críticas.
